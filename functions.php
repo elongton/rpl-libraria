@@ -125,7 +125,8 @@ function rpl_libraria_scripts() {
 	wp_enqueue_style( 's1', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 's2', get_template_directory_uri() . '/assets/css/mmenu.css' );
 	wp_enqueue_style( 's3', get_template_directory_uri() . '/assets/css/mmenu.positioning.css' );
-	wp_enqueue_style( 's4', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i');
+	wp_enqueue_style( 's4', get_template_directory_uri() . '/assets/css/dev_styles.css' );
+	wp_enqueue_style( 's5', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
 
 
