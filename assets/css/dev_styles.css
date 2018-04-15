@@ -1,0 +1,73 @@
+.dashed{border: 1px dashed white;}
+.dashed-black{border: 1px dashed black;}
+
+/* Header */
+.tip-top-nav{
+  height: 25px;
+  background: rgba(0, 40, 60, 0.5);
+}
+.tip-top-nav{
+  margin: 0; padding: 0; list-style-type: none;
+}
+.tip-top-nav ul li{
+  display: inline;
+}
+.rpl-brand{}
+.rpl-brand a{
+  display: flex;
+  flex-direction: row;"
+}
+.rpl-brand a div{
+  font-family: 'Times New Roman';
+  font-size: 32px;
+  line-height: 32px;
+  align-self: center;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+
+/* Homepage */
+.changing-image-cover{
+  background: rgba(0, 40, 60, 0.90);
+  height: 100%;
+  width: 100%;
+}
+
+.changing-image{
+  background-position: center 33%;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  padding: 0;
+}
+
+
+/* Search Bar */
+.search-float{margin-top: -200px;}
+.searchbar-wrapper{
+  font-size: 0;
+  position: relative;}
+#searchbar{
+  background-color: #006599;
+  color: white;
+  width: calc(100% - 80px);
+  display: inline-block;
+  margin: 0;
+  border-radius: 0;
+  vertical-align: top;
+  border: none;
+  font-size: 45px;
+  height: 80px!important;}
+#searchbutton{
+  background-color: #006599;
+  width: 80px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  font-size: 30px;
+  height: 80px!important;}
+#searchbutton:hover{
+  background-color: #004b72;
+  color: white;
+}

@@ -31,91 +31,43 @@
 <div id="page" class="site">
 	<!-- Start: Header Section -->
         <header id="header-v1" class="navbar-wrapper">
-            <div class="container">
+						<div class="tip-top-nav">
+							<div class="container" style="text-align: right; color: white; font-size: 13px;">
+								<ul>
+									<li>Account</li>
+									<li>Donate</li>
+									<li>Get a Card</li>
+									<li>Help</li>
+									<li>Print</li>
+									<li>Contact</li>
+								</ul>
+							</div>
+						</div>
+
+
+
+            <div class="container" style="margin-top: 30px;">
                 <div class="row">
                     <nav class="navbar navbar-default">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="navbar-header">
-                                    <div class="navbar-brand">
-                                        <h1>
+                                    <div class="rpl-brand"><!--had 'navbar-brand' class -->
                                             <a href="index.html">
-                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/libraria-logo-v1.png" alt="LIBRARIA" />
+																					      <?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
+																								<div class="">
+																									Richmond <br>Public<br>Library
+																								</div>
                                             </a>
-                                        </h1>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <!-- Header Topbar -->
-                                <div class="header-topbar hidden-sm hidden-xs">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="topbar-info">
-                                                <a href="tel:+61-3-8376-6284"><i class="fa fa-phone"></i>+61-3-8376-6284</a>
-                                                <span>/</span>
-                                                <a href="mailto:support@libraria.com"><i class="fa fa-envelope"></i>support@libraria.com</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="topbar-links">
-                                                <a href="signin.html"><i class="fa fa-lock"></i>Login / Register</a>
-                                                <span>|</span>
-                                                <div class="header-cart dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                        <small>0</small>
-                                                    </a>
-                                                    <div class="dropdown-menu cart-dropdown">
-                                                        <ul>
-                                                            <li class="clearfix">
-                                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/64x80.jpg" alt="cart item" />
-                                                                <div class="item-info">
-                                                                    <div class="name">
-                                                                        <a href="#">The Great Gatsby</a>
-                                                                    </div>
-                                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
-                                                                    <div class="price">1 X $10.00</div>
-                                                                </div>
-                                                                <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
-                                                            </li>
-                                                            <li class="clearfix">
-                                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/64x80.jpg" alt="cart item" />
-                                                                <div class="item-info">
-                                                                    <div class="name">
-                                                                        <a href="#">The Great Gatsby</a>
-                                                                    </div>
-                                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
-                                                                    <div class="price">1 X $10.00</div>
-                                                                </div>
-                                                                <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
-                                                            </li>
-                                                            <li class="clearfix">
-                                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/64x80.jpg" alt="cart item" />
-                                                                <div class="item-info">
-                                                                    <div class="name">
-                                                                        <a href="#">The Great Gatsby</a>
-                                                                    </div>
-                                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
-                                                                    <div class="price">1 X $10.00</div>
-                                                                </div>
-                                                                <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="cart-total">
-                                                            <div class="title">SubTotal</div>
-                                                            <div class="price">$30.00</div>
-                                                        </div>
-                                                        <div class="cart-buttons">
-                                                            <a href="cart.html" class="btn btn-dark-gray">View Cart</a>
-                                                            <a href="checkout.html" class="btn btn-primary">Checkout</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+																<?php //get_template_part('template-parts/header/content', 'header_topbar'); ?>
+
+
                                 <div class="navbar-collapse hidden-sm hidden-xs">
                                     <ul class="nav navbar-nav">
                                         <li class="dropdown active">
