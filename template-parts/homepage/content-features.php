@@ -1,4 +1,4 @@
-<section class="features" style="margin-top: -20px;">
+<section class="features">
     <div class="container">
         <ul>
             <li class="bg-yellow">

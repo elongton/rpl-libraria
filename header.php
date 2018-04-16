@@ -34,12 +34,11 @@
 						<div class="tip-top-nav">
 							<div class="container" style="text-align: right; color: white; font-size: 13px;">
 								<ul>
-									<li>Account</li>
-									<li>Donate</li>
-									<li>Get a Card</li>
-									<li>Help</li>
-									<li>Print</li>
-									<li>Contact</li>
+									<li><i class="fa fa-heart"></i> Donate</li>
+									<li><i class="fa fa-credit-card"></i> Get a Card</li>
+									<li><i class="fa fa-life-ring"></i> FAQ</li>
+									<li><i class="fa fa-phone"></i> Contact</li>
+									<li><i class="fa fa-user"></i> Account</li>
 								</ul>
 							</div>
 						</div>

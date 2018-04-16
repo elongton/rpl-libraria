@@ -3,19 +3,32 @@
 
 /* Header */
 .tip-top-nav{
-  height: 25px;
+  height: 40px;
   background: rgba(0, 40, 60, 0.5);
-}
-.tip-top-nav{
   margin: 0; padding: 0; list-style-type: none;
+  }
+.tip-top-nav div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100%;
 }
+.tip-top-nav ul{align-self: center; margin: 0;}
 .tip-top-nav ul li{
+  align-self: center;
   display: inline;
+  margin-left: 20px;
 }
 .rpl-brand{}
 .rpl-brand a{
   display: flex;
-  flex-direction: row;"
+  flex-direction: row;
+}
+
+#header_quote{font-size: 25px;}
+
+.rpl-brand a:hover{
+  color: white;
 }
 .rpl-brand a div{
   font-family: 'Times New Roman';
@@ -30,7 +43,8 @@
 /* Homepage */
 .changing-image-cover{
   background: rgba(0, 40, 60, 0.90);
-  height: 100%;
+  height: 75vh;
+  min-height: 600px;
   width: 100%;
 }
 
@@ -38,17 +52,23 @@
   background-position: center 33%;
   background-size: cover;
   position: relative;
-  height: 500px;
+  min-height: 75vh;
   padding: 0;
 }
 
 
 /* Search Bar */
-.search-float{margin-top: -200px;}
+.search-float{margin-top: -350px;}
+.search-float i{
+  position: relative;
+  color: white;
+  position: absolute;}
+#header_quote_left{margin-left: -18px;}
 .searchbar-wrapper{
   font-size: 0;
   position: relative;}
 #searchbar{
+  padding: 20px;
   background-color: #006599;
   color: white;
   width: calc(100% - 80px);
@@ -57,7 +77,7 @@
   border-radius: 0;
   vertical-align: top;
   border: none;
-  font-size: 45px;
+  font-size: 40px;
   height: 80px!important;}
 #searchbutton{
   background-color: #006599;
