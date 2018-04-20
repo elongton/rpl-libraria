@@ -6606,6 +6606,8 @@ button.close {
 .dl-horizontal dd:after,
 .container:before,
 .container:after,
+.tiles:after,
+.tiles:before,
 .container-fluid:before,
 .container-fluid:after,
 .row:before,
@@ -6638,6 +6640,7 @@ button.close {
 .clearfix:after,
 .dl-horizontal dd:after,
 .container:after,
+.tiles:after,
 .container-fluid:after,
 .row:after,
 .form-horizontal .form-group:after,
@@ -7040,9 +7043,9 @@ summary {
   font-size: 14px;
   color: #3e3e3e;
 }
-section {
+/* section {
   padding: 100px 0;
-}
+} */
 @media (max-width: 991px) {
   section {
     padding: 50px 0;
@@ -8260,11 +8263,11 @@ a:focus {
   /* top: 100px; */
   z-index: 99;
 }
-@media (max-width: 1499px) {
+/* @media (max-width: 1499px) {
   .navbar-wrapper {
     top: 30px;
   }
-}
+} */
 .navbar-wrapper .navbar-default {
   background-color: transparent;
   border-color: transparent;
@@ -9562,7 +9565,7 @@ a:focus {
 }
 .category-filter {
   background-attachment: fixed;
-  background-image: url(assets/images/1920x1236.jpg);
+  /* background-image: url(assets/images/1920x1236.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

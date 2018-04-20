@@ -1,4 +1,4 @@
-<section class="category-filter section-padding">
+<section class="category-filter section-padding" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/new_release_background.jpeg')">
     <div class="container">
         <div class="center-content">
             <div class="row">

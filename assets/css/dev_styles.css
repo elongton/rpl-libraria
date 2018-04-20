@@ -1,6 +1,6 @@
 .dashed{border: 1px dashed white;}
 .dashed-black{border: 1px dashed black;}
-
+.dashed-bold{border: 5px dashed white;}
 /* Header */
 .tip-top-nav{
   height: 40px;
@@ -41,13 +41,6 @@
 
 
 /* Homepage */
-.changing-image-cover{
-  background: rgba(0, 40, 60, 0.90);
-  height: 75vh;
-  min-height: 600px;
-  width: 100%;
-}
-
 .changing-image{
   background-position: center 33%;
   background-size: cover;
@@ -56,9 +49,18 @@
   padding: 0;
 }
 
+.changing-image-cover{
+  background: rgba(0, 40, 60, 0.85);
+  height: 75vh;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Search Bar */
-.search-float{margin-top: -350px;}
+.search-float{margin-top: 20vh;}
 .search-float i{
   position: relative;
   color: white;
@@ -91,3 +93,9 @@
   background-color: #004b72;
   color: white;
 }
+
+
+/* Tiles or Features */
+section.features + div::before{
+  display:table;
+  content: " ";}
