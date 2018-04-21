@@ -1,4 +1,6 @@
-<section class="category-filter section-padding" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/new_release_background.jpeg')">
+<section class="category-filter" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/new_release_background2.jpeg')">
+  <div class="new-release-cover section-padding">
+
     <div class="container">
         <div class="center-content">
             <div class="row">
@@ -23,7 +25,7 @@
         <ul class="category-list">
             <li class="category-item adults">
                 <figure>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/category-filter/home-v1/480x360.jpg" alt="New Releaase" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/shape_of_water.jpg" alt="New Releaase" />
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Great Gatsby</h4>
@@ -71,7 +73,7 @@
             </li>
             <li class="category-item kids-teens">
                 <figure>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/category-filter/home-v1/480x360.jpg" alt="New Releaase" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/wereworld.jpg" alt="New Release" />
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Great Gatsby</h4>
@@ -119,7 +121,7 @@
             </li>
             <li class="category-item video">
                 <figure>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/category-filter/home-v1/480x360.jpg" alt="New Releaase" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/wonder_woman.jpg" alt="New Releaase" />
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Great Gatsby</h4>
@@ -167,7 +169,7 @@
             </li>
             <li class="category-item audio">
                 <figure>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/category-filter/home-v1/480x360.jpg" alt="New Releaase" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/the_hobbit_audio.jpg" alt="New Releaase" />
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Great Gatsby</h4>
@@ -311,7 +313,7 @@
             </li>
             <li class="category-item adults">
                 <figure>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/category-filter/home-v1/480x360.jpg" alt="New Releaase" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/tangled_lands.jpg" alt="New Releaase" />
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Great Gatsby</h4>
@@ -359,7 +361,7 @@
             </li>
             <li class="category-item kids-teens">
                 <figure>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/category-filter/home-v1/480x360.jpg" alt="New Releaase" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/harry_potter.jpg" alt="New Releaase" />
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Great Gatsby</h4>
@@ -411,4 +413,9 @@
         </div>
         <div class="clearfix"></div>
     </div>
+
+
+  </div><!-- new-release-cover -->
+
+
 </section>

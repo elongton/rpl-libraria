@@ -99,3 +99,10 @@
 section.features + div::before{
   display:table;
   content: " ";}
+
+
+
+/* New Releases */
+.new-release-cover{
+    background: rgba(0, 40, 60, 0.85);
+}
