@@ -44,7 +44,9 @@ if ( ! function_exists( 'rpl_libraria_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'rpl-libraria' ),
+			'primary' => esc_html__( 'Primary' ),
+			'tippy_top' => esc_html__( 'Tip Top' ),
+			'footer_bottom' => esc_html__( 'Footer Bottom' ),
 		) );
 
 		/*

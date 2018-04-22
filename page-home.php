@@ -14,6 +14,10 @@ get_header();
       <!-- End: Top Most Section -->
       <!-- End: Search Section -->
 
+      <!-- Start: Featured Event Section -->
+      <?php get_template_part('template-parts/homepage/content', 'featured_event_section'); ?>
+      <!-- End: Featured Event Section -->
+
       <!-- Start: Tiles -->
       <?php get_template_part('template-parts/homepage/content', 'tiles'); ?>
       <!-- End: Tiles -->
