@@ -1,7 +1,21 @@
+/* Colors */
+.bg-tile1{background-color: #384da1;}
+.bg-tile2{background-color: #9f4599;}
+.bg-tile3{background-color: #bb4e26;}
+.bg-tile4{background-color: #b9a530;}
+.bg-tile5{background-color: #3ab449;}
+.bg-tile6{background-color: #2f2c3b;}
+
+
+
 .dashed{border: 1px dashed white;}
 .dashed-black{border: 1px dashed black;}
 .dashed-bold{border: 5px dashed white;}
 /* Header */
+
+.menu_icon{margin-right: 3px;}
+
+
 .tip-top-nav{
   height: 40px;
   background: rgba(0, 40, 60, 0.5);

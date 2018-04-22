@@ -46,6 +46,7 @@ if ( ! function_exists( 'rpl_libraria_setup' ) ) :
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary' ),
 			'tippy_top' => esc_html__( 'Tip Top' ),
+			'quick_links' => esc_html__( 'Quick Links' ),
 			'footer_bottom' => esc_html__( 'Footer Bottom' ),
 		) );
 

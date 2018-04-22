@@ -20,7 +20,7 @@
 							<div class="row">
 									<div class="col-md-4 col-sm-6 widget-container">
 											<div id="text-2" class="widget widget_text">
-													<h3 class="footer-widget-title">About Libraria</h3>
+													<h3 class="footer-widget-title">About Richmond Public Library</h3>
 													<span class="underline left"></span>
 													<div class="textwidget">
 															It is a long established fact that a reader will be distracted by the readable content of a page when looking.
@@ -46,14 +46,7 @@
 													<h3 class="footer-widget-title">Quick Links</h3>
 													<span class="underline left"></span>
 													<div class="menu-quick-links-container">
-															<ul id="menu-quick-links" class="menu">
-																	<li><a href="#">Library News</a></li>
-																	<li><a href="#">History</a></li>
-																	<li><a href="#">Meet Our Staff</a></li>
-																	<li><a href="#">Board of Trustees</a></li>
-																	<li><a href="#">Budget</a></li>
-																	<li><a href="#">Annual Report</a></li>
-															</ul>
+														<?php wp_nav_menu( array( 'theme_location' => 'quick_links' ) );?>
 													</div>
 											</div>
 									</div>
@@ -100,16 +93,9 @@
 											<p>&copy; 2018 Richmond Public Library. All rights reserved.</p>
 									</div>
 									<div class="col-md-9 pull-right">
-											<ul>
-													<li><a href="index.html">Home</a></li>
-													<li><a href="books-media-list-view.html">Books &amp; Media</a></li>
-													<li><a href="news-events-list-view.html">News &amp; Events</a></li>
-													<li><a href="#">Kids &amp; Teens</a></li>
-													<li><a href="services.html">Services</a></li>
-													<li><a href="#">Research</a></li>
-													<li><a href="blog.html">Blog</a></li>
-													<li><a href="contact.html">Contact</a></li>
-											</ul>
+										<?php wp_nav_menu( array( 'theme_location' => 'footer_bottom',
+									 														'menu_class' => false,
+																							'menu_id'=> false) );?>
 									</div>
 							</div>
 					</div>

@@ -9,7 +9,7 @@
             <li>
                 <a class="facebook" href="#" target="_blank">
                     <span>
-                        <i class="fa fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i>
                     </span>
                 </a>
             </li>
@@ -23,7 +23,7 @@
             <li>
                 <a class="google" href="#" target="_blank">
                     <span>
-                        <i class="fa fa-google-plus"></i>
+                        <i class="fab fa-google-plus"></i>
                     </span>
                 </a>
             </li>
