@@ -47,6 +47,7 @@ if ( ! function_exists( 'rpl_libraria_setup' ) ) :
 			'primary' => esc_html__( 'Primary' ),
 			'tippy_top' => esc_html__( 'Tip Top' ),
 			'quick_links' => esc_html__( 'Quick Links' ),
+			'form_links' => esc_html__( 'Forms' ),
 			'footer_bottom' => esc_html__( 'Footer Bottom' ),
 		) );
 
