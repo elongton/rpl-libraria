@@ -1,4 +1,4 @@
-<section class="category-filter" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/new_release_background2.png')">
+<section class="category-filter" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/resized_backgrounds/new_release_background2.png')">
   <div class="new-release-cover section-padding">
 
     <div class="container">

@@ -58,10 +58,10 @@
 
 					<!-- ////////////////////////// START: DESKTOP NAV SECTION ////////////////////////////////////-->
 											<div class="" style="display: flex; align-items: center;">
-												<div class="rpl-brand"><!--had 'navbar-brand' class -->
+												<div class="rpl-brand dashed" style="display: flex;"><!--had 'navbar-brand' class -->
 													<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 															<?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
-															<div class="">
+															<div class="dashed logo_text">
 																Richmond <br>Public<br>Library
 															</div>
 													</a>

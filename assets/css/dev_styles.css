@@ -13,6 +13,7 @@
 .dashed-bold{border: 5px dashed white;}
 /* Header */
 
+
 .menu_icon{margin-right: 3px;}
 
 
@@ -33,18 +34,14 @@
   display: inline;
   margin-left: 20px;
 }
-.rpl-brand{}
-.rpl-brand a{
-  display: flex;
-  flex-direction: row;
+.rpl-brand{
+  /* width: 150px; */
 }
-
-#header_quote{font-size: 25px;}
-
-.rpl-brand a div:hover{
-  color: #cc6600;
+.svg_logo{
+  flex: 0 1 auto;
 }
-.rpl-brand a div{
+.logo_text{
+  flex: 0 1 auto;
   transition: color 0.5s ease;
   font-family: 'Times New Roman';
   font-size: 32px;
@@ -55,6 +52,15 @@
   color: white;
 }
 
+.logo_text:hover{
+  color: #cc6600;
+}
+.rpl-brand a{
+  display: flex;
+  flex-direction: row;
+}
+
+#header_quote{font-size: 25px;}
 
 /* Homepage */
 .changing-image{
