@@ -34,34 +34,29 @@
 					<!-- ////////////////////////// START: TIP TOP NAV SECTION ////////////////////////////////////-->
 						<div class="tip-top-nav">
 							<div class="container" style="color: white;">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<div class="mobile_svg_logo">
+										<?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
+									</div>
+								</a>
+								<div class="spacer"></div>
 								<?php wp_nav_menu( array( 'theme_location' => 'tippy_top' ) );?>
-							</div>
-
-
-
-							<div class="container" style="text-align: right; color: white; font-size: 13px; display:none;">
-								<ul>
-									<li><i class="fa fa-heart"></i> Donate</li>
-									<li><i class="fa fa-credit-card"></i> Get a Card</li>
-									<li><i class="fa fa-life-ring"></i> FAQ</li>
-									<li><i class="fa fa-phone"></i> Contact</li>
-									<li><i class="fa fa-user"></i> Account</li>
-								</ul>
 							</div>
 						</div>
 					<!-- ////////////////////////// END: TIP TOP NAV SECTION ////////////////////////////////////-->
 
 
-            <div class="container" style="margin-top: 30px;">
-                <div class="row">
+            <div class="container nav-container">
                     <nav class="navbar navbar-default">
 
 					<!-- ////////////////////////// START: DESKTOP NAV SECTION ////////////////////////////////////-->
 											<div class="" style="display: flex; align-items: center;">
-												<div class="rpl-brand dashed" style="display: flex;"><!--had 'navbar-brand' class -->
+												<div class="rpl-brand"><!--had 'navbar-brand' class -->
 													<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-															<?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
-															<div class="dashed logo_text">
+															<div class="svg_logo">
+																<?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
+															</div>
+															<div class="logo_text">
 																Richmond <br>Public<br>Library
 															</div>
 													</a>
@@ -75,7 +70,6 @@
 					<!-- ////////////////////////// END: DESKTOP NAV SECTION ////////////////////////////////////-->
 									      <?php //get_template_part('template-parts/header/content', 'old_mobile_menu'); ?>
                     </nav>
-                </div>
             </div><!--container -->
         </header>
         <!-- End: Header Section -->

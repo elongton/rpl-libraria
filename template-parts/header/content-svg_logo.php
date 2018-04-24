@@ -1,4 +1,4 @@
-<svg class="svg_logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="105.25px" height="101px" viewBox="0 0 105.25 101" enable-background="new 0 0 105.25 101" xml:space="preserve">
 <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M3.564,18.771c0,0,23.846-19.293,48.96-2.474
 	c0.738,0.495,22.145-17.316,49.944,2.97l-0.247,79.906c0,0-20.174-15.091-48.959-4.452c0,0-21.405-11.38-49.452,4.204L3.564,18.771z

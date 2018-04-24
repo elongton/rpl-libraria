@@ -31,7 +31,7 @@
   <form style="margin-top: 20px;">
     <div class="form-group searchbar-wrapper" style="display: flex;">
       <!-- <label class="sr-only" for="keywords">Search</label> -->
-      <input class="form-control" id="searchbar" placeholder="Search the Library" id="keywords" name="keywords" type="text">
+      <input class="" id="searchbar" placeholder="Search the Library" id="keywords" name="keywords" type="text">
       <!-- <input class="form-control" id="searchbutton" type="submit" value="Search"> -->
       <button id="searchbutton" type="submit" style="display:flex; justify-content: center;"><i style="align-self: center;" class="fa fa-search"></i></button>
     </div>
