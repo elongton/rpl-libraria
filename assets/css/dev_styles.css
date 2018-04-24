@@ -23,6 +23,9 @@
 
 
 /* Header */
+@media(max-width: 992px){
+  .primary_menu{display:none;}
+}
 .menu_icon{margin-right: 3px;}
 .tip-top-nav{
   height: 40px;
@@ -160,20 +163,22 @@
 
 @media(max-width: 550px){
   .changing-image{
-    min-height: 40vh;
+    min-height: 95vh;
   }
   .changing-image-cover{
     min-height: 300px;
-    height: 50vh;
+    height: 95vh;
   }
 }
 
 
 /* Search Bar */
 .search-float{margin-top: 20vh;}
+.searchbar_form{margin-top: 20px;}
 
 @media(max-width: 550px){
-  .search-float{margin-top: 10vh;}
+  .search-float{margin-top: 0;}
+  .searchbar_form{margin-top: 7vh;}
 }
 
 
@@ -227,15 +232,15 @@
 }
 @media(max-width: 550px){
     #searchbar{
-      font-size: 20px;
+      font-size: 25px;
       width: calc(100% - 50px);
-      height: 40px;
+      height: 50px;
       padding-left: 10px;
     }
     #searchbutton{
-      font-size: 15px;
+      font-size: 17px;
       width: 50px;
-      height: 40px;
+      height: 50px;
     }
 }
 

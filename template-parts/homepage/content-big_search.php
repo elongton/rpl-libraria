@@ -28,7 +28,7 @@
       echo (count($quote_array) == 0 ? $default_author : $quote_array[$randomQuoteIndex][1]);
     ?>
   </span>
-  <form style="margin-top: 20px;">
+  <form class="searchbar_form">
     <div class="form-group searchbar-wrapper" style="display: flex;">
       <!-- <label class="sr-only" for="keywords">Search</label> -->
       <input class="" id="searchbar" placeholder="Search the Library" id="keywords" name="keywords" type="text">

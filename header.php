@@ -61,7 +61,7 @@
 															</div>
 													</a>
 												</div>
-												<div class="" style="flex-grow: 1;">
+												<div class="primary_menu" style="flex-grow: 1;">
 													<?php wp_nav_menu( array( 'theme_location' => 'primary' ) );?>
 												</div>
 
