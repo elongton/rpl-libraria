@@ -2,7 +2,7 @@
 
 <div class="container" style="display: flex;">
 
-  <img style="border-radius: 7px;"  class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/featured_event/girl.png" alt="">
+  <img style="border-radius: 7px;"  class="img-fluid" src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/featured_event/girl.png" alt="">
 
   <div class="" style="color: white; padding-left: 30px; padding-right: 15px; display: flex; flex-direction: column;">
     <div class="" style="">

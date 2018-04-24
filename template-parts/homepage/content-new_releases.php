@@ -1,4 +1,4 @@
-<section class="category-filter" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/new_release_background2.png')">
+<section class="category-filter" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/new_release_background2.png')">
   <div class="new-release-cover section-padding">
 
     <div class="container">
@@ -25,7 +25,7 @@
         <ul class="category-list">
             <li class="category-item adults">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/shape_of_water.jpg');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/shape_of_water.jpg');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Shape of Water</h4>
@@ -73,7 +73,7 @@
             </li>
             <li class="category-item kids-teens">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/wereworld.jpg');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/wereworld.jpg');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>Wereworld</h4>
@@ -121,7 +121,7 @@
             </li>
             <li class="category-item video">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/wonder_woman.jpg');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/wonder_woman.jpg');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>Wonder Woman</h4>
@@ -169,7 +169,7 @@
             </li>
             <li class="category-item audio">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/the_hobbit_audio.jpg');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/the_hobbit_audio.jpg');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Hobbit</h4>
@@ -217,7 +217,7 @@
             </li>
             <li class="category-item books">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/name_of_the_wind.png');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/name_of_the_wind.png');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Name of the Wind</h4>
@@ -265,7 +265,7 @@
             </li>
             <li class="category-item magazines">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/the_fireman.gif');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/the_fireman.gif');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>The Fireman</h4>
@@ -313,7 +313,7 @@
             </li>
             <li class="category-item adults">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/tangled_lands.jpg');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/tangled_lands.jpg');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>Tangled Lands</h4>
@@ -361,7 +361,7 @@
             </li>
             <li class="category-item kids-teens">
                 <figure>
-                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/customization/homepage/bookcovers/harry_potter.jpg');"></div>
+                    <div class="bookcover" style="height: 360px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/bookcovers/harry_potter.jpg');"></div>
                     <figcaption class="bg-orange">
                         <div class="info-block">
                             <h4>Harry Potter and the Chamber of Secrets</h4>
