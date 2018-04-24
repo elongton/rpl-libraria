@@ -239,6 +239,28 @@
     }
 }
 
+
+/* Featured Event */
+@media(min-width: 1200px){
+  .featuredevent_row{display:flex;}
+  .featuredevent_image_div{
+    flex-basis: auto;
+    width: auto;
+  }
+  .featuredevent_text_div{flex: 1;}
+}
+
+@media(max-width: 992px){
+  .featuredevent_image_div{
+    text-align:center;
+    padding-bottom: 15px;
+  }
+  .featuredevent_image_div div img{
+    width: 100%;
+  }
+}
+
+
 /* Tiles or Features */
 section.features + div::before{
   display:table;
