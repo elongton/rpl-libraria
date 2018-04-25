@@ -25,7 +25,7 @@
   <span style="color: white; z-index: 99; position: relative;" id="header_quote_author">
     <?php
       $default_author = 'Albert Einstein, Physicist';
-      echo (count($quote_array) == 0 ? $default_author : $quote_array[$randomQuoteIndex][1]);
+      echo (count($quote_array) == 0 ? $default_author : ($quote_array[$randomQuoteIndex][1] == '' ? 'Unknown' : $quote_array[$randomQuoteIndex][1])    );
     ?>
   </span>
   <form class="searchbar_form">

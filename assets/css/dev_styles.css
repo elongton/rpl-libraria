@@ -6,6 +6,12 @@
   flex: 1 1 auto;
 }
 
+.table_parent {
+  display: table; }
+
+.table_child {
+  display: table-cell;
+  vertical-align: middle; }
 
 /* Colors */
 .bg-tile1{background-color: #384da1;}
@@ -271,6 +277,13 @@ section.features + div::before{
   display:table;
   content: " ";}
 
+@media(max-width: 992px){
+  section.features{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 
 /* New Releases */
 .new-release-cover{
@@ -281,6 +294,18 @@ section.features + div::before{
   background-size: cover;
   background-position: center;
 }
+@media(max-width: 992px){
+  section.category-filter{
+    background-image: none!important;
+    padding: 0 0;
+  }
+  .new-release-cover{
+      background: rgba(0, 40, 60, 1);
+  }
+}
+
+/* Footer */
+
 
 
 /* Twitter */
@@ -288,3 +313,42 @@ section.features + div::before{
 .ctf-item:nth-child(2){margin-top: 20px;}
 .ctf-author-name{margin-left: 0!important; margin-top: 0!important;}
 .ctf-tweet-actions i, .ctf-tweet-actions span{color: white!important;}
+
+
+/* scroll to top */
+div#scroll-to-top-button{
+  display: none;
+  z-index: 9999;
+  background-color: #ff7236;
+  height: 75px;
+  width: 75px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  text-align: center;
+}
+
+
+div#scroll-to-top-button div{
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+}
+
+@media(max-width:550px){
+  div#scroll-to-top-button{
+    height: 50px;
+    width: 50px;
+    right: 25px;
+    bottom: 25px;
+  }
+
+  div#scroll-to-top-button div{
+    font-size: 25px;
+  }
+
+}

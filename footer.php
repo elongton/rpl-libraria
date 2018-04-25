@@ -96,6 +96,14 @@
 			</div>
 	</footer>
 	<!-- End: Footer -->
+
+	<div id="scroll-to-top-button">
+		<div>
+			<i class="fas fa-arrow-up "></i>
+		</div>
+	</div><!--scroll-to-top-button-->
+
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

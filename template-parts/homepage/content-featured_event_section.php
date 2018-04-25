@@ -1,40 +1,53 @@
-<div class="" style="padding: 50px 0; background-color: #006599;">
+<?php
+  $event_loop = new WP_Query( array('post_type' => 'featured_events'));
+  $title = [];
+  $dates = [];
+  $location = [];
+  $description = [];
+  $view_more = [];
+  $button_text = [];
+  $button_url = [];
+  $i = 0;
+  while( $event_loop ->have_posts()) : $event_loop->the_post();
+    $title[$i]                 = get_the_title();
+    $image_url[$i]             = get_field('event_image');
+    $dates[$i]                 = get_field('dates');
+    $location[$i]              = get_field('location');
+    $description[$i]           = get_field('description');
+    $view_more[$i]             = get_field('view_more');
+    $view_more_url[$i]         = get_field('view_more_url');
+    $button_text[$i]           = get_field('button_text');
+    $button_url[$i]            = get_field('button_url');
+    $i++;
+  endwhile;
+  $randomEventIndex = rand(0,$i-1);
+  wp_reset_postdata();
+ ?>
 
-  <!-- <div class="container" style="margin-bottom: 50px;">
-      <div class="center-content">
-          <div class="row">
-              <div class="col-md-6 col-md-offset-3">
-                  <h2 class="section-title" style="color: white;">Featured</h2>
-                  <span class="underline center"></span>
-              </div>
-          </div>
-      </div>
-  </div> -->
 
+
+<div style="padding: 50px 0; background-color: #006599; <?php echo ($i > 0 ? '' : 'display: none;');?>">
   <div class="container">
     <div class="row featuredevent_row">
       <div class="col-md-6 featuredevent_image_div">
         <div class="" style="width: 100%;">
-            <img style="border-radius: 7px;"  style="width: 100%;" src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/homepage/featured_event/girl.png" alt="">
+            <img style="border-radius: 7px;"  style="width: 100%;" src="<?php echo $image_url[$randomEventIndex]; ?>" alt="">
         </div>
-
       </div>
 
       <div class="col-md-6 featuredevent_text_div" style="color: white; padding-right: 15px; display: flex; flex-direction: column;">
         <div class="" style="">
           <!-- <span style="font-size: 30px;">Richmond Art Fair</span><br> -->
-          <h2>Richmond Art Fair</h2><br>
-          <span style="font-size: 20px;">May 1st - May 25th</span><br>
-          <span style="font-size: 20px;">Belmont Branch Library</span>
-          <p style="font-size: 18px; margin-top: 15px; line-height: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim aliquam lectus id suscipit. Integer accumsan lorem faucibus mi rhoncus, ut egestas diam tempus. Duis ut pulvinar dolor. Donec faucibus mi eu nisi malesuada, et sollicitudin eros sollicitudin. Nullam massa nunc, imperdiet non iaculis vitae, tincidunt volutpat nisi. Proin luctus urna lectus, sed interdum odio dapibus ut. Curabitur pellentesque lectus nec lorem egestas fermentum. Aenean ac convallis eros, eleifend pretium justo.</p>
+          <h2><?php echo $title[$randomEventIndex]; ?></h2><br>
+          <span style="font-size: 20px;"><?php echo $dates[$randomEventIndex]; ?></span><br>
+          <span style="font-size: 20px;"><?php echo $location[$randomEventIndex]; ?></span>
+          <p style="font-size: 18px; margin-top: 15px; line-height: 30px;"><?php echo $description[$randomEventIndex]; ?></p>
         </div>
         <div class="" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
-          <a href="" style="margin-right: 10px;" class="btn btn-primary">Sign Up</a>
-          <a href="" class="btn btn-primary">View More Events</a>
+          <a href="<?php echo $button_url[$randomEventIndex]; ?>" style="margin-right: 10px;" class="btn btn-primary"><?php echo $button_text[$randomEventIndex]; ?></a>
+          <?php echo ($view_more[$randomEventIndex] ? '<a href="'.$view_more_url[$randomEventIndex].'" class="btn btn-primary">View More Events</a>' : '');?>
         </div>
       </div>
     </div><!--row-->
   </div><!--container-->
-
-
-</div>
+</div><!--background-color div-->

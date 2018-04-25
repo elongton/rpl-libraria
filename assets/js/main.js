@@ -2,6 +2,7 @@
 // >>> TABLE OF CONTENTS:
 //----------------------------------------------------------------
 
+// 00. Scroll to Top
 // 01. Mobile Menu
 // 02. Header Dropdown Menu
 // 03. Select List (Dropdown)
@@ -23,6 +24,35 @@
 
 $(function () {
     'use strict';
+    //Scroll to top
+    //--------------------------------------------------------
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var windowScroll = 500;
+        if (document.body.scrollTop > windowScroll || document.documentElement.scrollTop > windowScroll) {
+            // document.getElementById("scroll-to-top-button").style.display = "table";
+            $("#scroll-to-top-button").fadeIn(500);
+
+        } else {
+            // document.getElementById("scroll-to-top-button").style.display = "none";
+            $("#scroll-to-top-button").fadeOut(500);
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+
+
+    $( "#scroll-to-top-button" ).click(function() {
+      $('html,body').animate({ scrollTop: 0 }, 'slow');
+      return false;
+    });
+
+
+
+
 
     //Mobile Menu
     //--------------------------------------------------------
