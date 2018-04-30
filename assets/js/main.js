@@ -50,67 +50,25 @@ $(function () {
       return false;
     });
 
-
-
-
-
-    //Mobile Menu
+    //Owl Carousel
     //--------------------------------------------------------
-    var bodyObj = $('body');
-    var MenuObj = $("#menu");
-    var mobileMenuObj = $('#mobile-menu');
-
-    bodyObj.wrapInner('<div id="wrap"></div>');
-
-    var toggleMenu = {
-        elem: MenuObj,
-        mobile: function () {
-            //activate mmenu
-            mobileMenuObj.mmenu({
-                slidingSubmenus: false,
-                position: 'right',
-                zposition: 'front'
-            }, {
-                pageSelector: '#wrap'
-            });
-
-            //hide desktop top menu
-            this.elem.hide();
-        },
-        desktop: function () {
-            //close the menu
-            mobileMenuObj.trigger("close.mm");
-
-            //reshow desktop menu
-            this.elem.show();
-        }
-    };
-
-    Harvey.attach('screen and (max-width:991px)', {
-        setup: function () {
-            //called when the query becomes valid for the first time
-        },
-        on: function () {
-            //called each time the query is activated
-            toggleMenu.mobile();
-        },
-        off: function () {
-            //called each time the query is deactivated
-        }
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        items:1,
+        animateOut: 'fadeIn',
+        animateIn: 'fadeOut',
+        loop: true,
+        dots: false,
+        nav: true,
+        pullDrag: false,
+        mouseDrag: false,
+        responsiveRefreshRate: 50,
+      });
     });
 
-    Harvey.attach('screen and (min-width:992px)', {
-        setup: function () {
-            //called when the query becomes valid for the first time
-        },
-        on: function () {
-            //called each time the query is activated
-            toggleMenu.desktop();
-        },
-        off: function () {
-            //called each time the query is deactivated
-        }
-    });
+
+
+
 
     //Header Dropdown Menu
     //--------------------------------------------------------
@@ -213,66 +171,6 @@ $(function () {
     var tagObj = $('[data-toggle="blog-tags"]');
     tagObj.tooltip();
 
-    //Owl Carousel
-    //--------------------------------------------------------
-    var owlObj = $('.owl-carousel');
-    owlObj.owlCarousel({
-        loop: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 2
-            }
-        }
-    });
-
-    var owlEventObj = $('.owl-carousel-event');
-    owlEventObj.owlCarousel({
-        loop: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1200: {
-                items: 3
-            }
-        }
-    });
-
-    //Sidebar Accordion
-    //--------------------------------------------------------
-    var secondaryObj = $('#secondary [data-accordion]');
-    var multipleObj = $('#multiple [data-accordion]');
-    var singleObj = $('#single[data-accordion]');
-
-    secondaryObj.accordion({
-        singleOpen: true
-    });
-
-    multipleObj.accordion({
-        singleOpen: false
-    });
-
-    singleObj.accordion({
-        transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
-        transitionSpeed: 200
-    });
 
     //Responsive Tabs
     //--------------------------------------------------------
@@ -310,13 +208,13 @@ $(function () {
 
     //Bootstrap Carousel Swipe (Testimonials Carousel)
     //--------------------------------------------------------
-    var testimonialsObj = $("#testimonials");
-    testimonialsObj.swiperight(function () {
-        $(this).carousel('prev');
-    });
-    testimonialsObj.swipeleft(function () {
-        $(this).carousel('next');
-    });
+    // var testimonialsObj = $("#testimonials");
+    // testimonialsObj.swiperight(function () {
+    //     $(this).carousel('prev');
+    // });
+    // testimonialsObj.swipeleft(function () {
+    //     $(this).carousel('next');
+    // });
 
     //Bx Carousel
     //--------------------------------------------------------
@@ -449,15 +347,5 @@ $(function () {
             }
         }
         return false;
-    });
-});
-
-$( window ).load(function() {
-    //Masonry
-    //--------------------------------------------------------
-    var girdFieldObj = $('.grid');
-    girdFieldObj.masonry({
-        itemSelector: '.grid-item',
-        percentPosition: true
     });
 });
