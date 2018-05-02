@@ -15,12 +15,11 @@
 get_header();
 ?>
 
-<div style="height: 300px; background-color: black;">
+<div style="height: 205px; background-color: black;">
 
 </div>
 <section>
-	<div class="container">
-		<div class="col-sm-12">
+
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -35,8 +34,7 @@ get_header();
 			endwhile; // End of the loop.
 			?>
 
-		</div>
-	</div>
+
 </section>
 
 

@@ -11634,7 +11634,10 @@ a:focus {
   color: #ee1c1b;
 }
 .site-footer {
-  background-color: #282828;
+  /* background-color: #282828; */
+  /*first shot */
+  background-color: #003652;
+  /* background-color: #000040; */
 }
 .site-footer .tablet-margin-bottom {
   margin-bottom: 20px;
@@ -11752,7 +11755,8 @@ a:focus {
   margin-bottom: 0;
 }
 .site-footer .sub-footer {
-  background-color: #161616;
+  /* background-color: #161616; */
+  background-color: rgba(0, 40, 60, 0.7);
   padding: 30px 0;
 }
 @media (max-width: 991px) {
