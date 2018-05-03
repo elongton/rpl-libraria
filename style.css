@@ -7705,6 +7705,9 @@ h2 {
   margin: 0;
   padding: 0;
 }
+.entry-content h2{
+  color: inherit;
+}
 .section-title {
   color: #282828;
   font-size: 35px;
@@ -18002,8 +18005,9 @@ a:focus {
   -moz-box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.07);
   background-color: #fff;
-  margin: 50px 0;
-  padding: 50px;
+  padding: 20px 15px;
+  /* margin: 50px 0; */
+  /* padding: 50px; */
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .comments-area .comment-bg {
@@ -18196,6 +18200,7 @@ a:focus {
 .reply a:hover {
   background: #ff7236;
 }
+.comment-respond{margin-top: 30px; margin-bottom: 30px;}
 .comment-respond .comment-form-author,
 .comment-respond .comment-form-email,
 .comment-respond .comment-form-subject {

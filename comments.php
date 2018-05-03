@@ -22,14 +22,15 @@ if ( post_password_required() ) {
 
 
 <div class="comments-area" id="comments">
-	<div class="comment-bg">
+	<!-- <div class="container dashed-black"></div> -->
+	<div class="comment-bg container">
 		<h4 class="comments-title">User Comments</h4>
 		<span class="underline left"></span>
 		<ol class="comment-list">
 				<li class="comment even thread-even depth-1 parent">
 						<div class="comment-body">
 								<div class="comment-author vcard">
-										<img class="avatar avatar-32 photo avatar-default" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/64x64.jpg" alt="Comment Author">
+										<img class="avatar avatar-32 photo avatar-default" src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/64x64.jpg" alt="Comment Author">
 										<b class="fn">
 												<a class="url" rel="external nofollow" href="#">Emma</a>
 										</b>
@@ -58,7 +59,7 @@ if ( post_password_required() ) {
 								<li class="comment odd alt depth-2">
 										<div class="comment-body">
 												<div class="comment-author vcard">
-														<img class="avatar photo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/64x64.jpg" alt="Comment Avatar">
+														<img class="avatar photo" src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/64x64.jpg" alt="Comment Avatar">
 														<b class="fn">
 																<a class="url" rel="external nofollow" href="#">Peter</a>
 														</b>
@@ -86,7 +87,7 @@ if ( post_password_required() ) {
 						</ol>
 						<div class="comment-body">
 								<div class="comment-author vcard">
-										<img class="avatar avatar-32 photo avatar-default" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/64x64.jpg" alt="Comment Author">
+										<img class="avatar avatar-32 photo avatar-default" src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/64x64.jpg" alt="Comment Author">
 										<b class="fn">
 												<a class="url" rel="external nofollow" href="#">Mathew</a>
 										</b>
@@ -116,7 +117,7 @@ if ( post_password_required() ) {
 	</div>
 
 
-	<div class="comment-respond" id="respond">
+	<div class="comment-respond container" id="respond">
 		<h4 class="comment-reply-title" id="reply-title">Write your comment:</h4>
 		<span class="underline left"></span>
 		<form class="comment-form" id="commentform" method="post" action="blog-detail.html">

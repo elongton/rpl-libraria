@@ -36,3 +36,8 @@ header.page-entry-header{
   width: 100%;
   height: 100%;
 }
+
+
+footer.entry-footer{
+  margin-top: 30px;
+}
