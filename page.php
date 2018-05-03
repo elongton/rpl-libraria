@@ -15,11 +15,7 @@
 get_header();
 ?>
 
-<div style="height: 205px; background-color: black;">
-
-</div>
 <section>
-
 			<?php
 			while ( have_posts() ) :
 				the_post();
