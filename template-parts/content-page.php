@@ -14,28 +14,6 @@
 
 <?php get_template_part( 'template-parts/page/content', 'pageheader' );?>
 
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="page-entry-header">
-		<div class="container" id="page-entry-header-container">
-			<div>
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</div>
-			<div class="spacer"></div>
-			<div id="breadcrumbs-container">
-				<?php
-						if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb('
-						<span id="breadcrumbs">','</span>
-						');}
-					?>
-			</div>
-
-		</div>
-
-	</header><!-- .entry-header -->
-
-
 	<div class="entry-content">
 		<div class="container">
 		<?php
