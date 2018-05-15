@@ -13632,7 +13632,7 @@ a:focus {
   display: block;
 }
 .hentry {
-  margin: 0 0 20px;
+  margin: 0 0 0px;
 }
 .byline,
 .updated:not(.published) {

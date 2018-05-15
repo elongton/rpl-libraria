@@ -1,0 +1,47 @@
+.emphasis_section{
+  height: 500px;
+  padding: 9vw 9vw;
+}
+
+.legend_table_container{
+  border-top-right-radius: 5px;
+  opacity: 0.1;
+  transition: opacity 0.2s ease-in-out;
+}
+.legend_table_container:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.legend_table tr td:nth-child(2){
+  width: 70%;
+}
+
+
+.location-map-section .row .col-lg-6,
+.location-map-section .row .col-xs-12,
+.location-image-section .row .col-md-4,
+.location-image-section .row .col-sm-6,
+.location-image-section .row .col-xs-12{
+  padding: 0;
+}
+
+.location_card_overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.location_card_overlay:hover{
+  background-color: rgba(0, 43, 66, 0.5);
+}
+.location_card_overlay span{
+  opacity: 0;
+  color: white;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.location_card_overlay:hover span{
+  opacity: 1;
+}

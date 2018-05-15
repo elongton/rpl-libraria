@@ -16,10 +16,9 @@ Template Name: FAQ
  }//for
 
 get_header();
-
+get_template_part( 'template-parts/page/content', 'pageheader' );
 ?>
 
-<?php get_template_part( 'template-parts/page/content', 'pageheader' );?>
 
 
 <div class="container">
