@@ -31,7 +31,7 @@ jQuery(document).ready(function( $ ) {
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
-        var windowScroll = 500;
+        var windowScroll = 300;
         if (document.body.scrollTop > windowScroll || document.documentElement.scrollTop > windowScroll) {
             // document.getElementById("scroll-to-top-button").style.display = "table";
             $("#scroll-to-top-button").fadeIn(500);

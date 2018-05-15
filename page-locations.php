@@ -2,9 +2,30 @@
 /*
 Template Name: Locations
  */
+ $url = 'https://api3.libcal.com/api_hours_grid.php?iid=4083&format=json&weeks=1&systemTime=0';
+ $days = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+ $dayofweek = date('w');
+ $response = wp_remote_get( $url );
+ if( is_wp_error( $response ) ) {
+    $error_message = $response->get_error_message();
+    echo "Something went wrong: $error_message";
+ } else {
+   $body_string = json_decode($response['body'], true);
+ }
+
+
+ function timerowsAPI($day, $branch_index, $body_string){
+     echo "<tr>";
+     echo "<td>$day</td>";
+     echo "<td>";
+     echo $body_string['locations'][$branch_index]['weeks'][0][$day]['rendered'];
+     echo "</td>";
+     echo "</tr>";
+ }
 
 
  $description =     get_field('description');
+ $holiday_hours =   get_field('holiday_hours_link');
 
  get_header();
  get_template_part( 'template-parts/page/content', 'pageheader' );
@@ -12,14 +33,14 @@ Template Name: Locations
 
 <section class="container-fluid location-map-section">
   <div class="row">
-    <div class="col-lg-6 col-xs-12">
-        <div class="emphasis_section">
+    <div class="col-sm-6 col-xs-12">
+        <div class="emphasis_section" style="display:flex; justify-content: center; align-content: center; flex-direction: column;">
           <?php echo $description;?>
-          <button class="btn btn-primary">Sunday and Holiday Hours</button>
+          <a href="<?php echo $holiday_hours; ?>"><button class="btn btn-primary" style="width: 300px;">Sunday and Holiday Hours</button></a>
         </div>
 
     </div>
-    <div class="col-lg-6 col-xs-12" style="position: relative;">
+    <div class="col-sm-6 col-xs-12" style="position: relative;">
       <?php get_template_part( 'template-parts/locations/content', 'map' );?>
     </div>
   </div>
@@ -28,14 +49,52 @@ Template Name: Locations
 
 <section class="container-fluid location-image-section">
   <div class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="">
-          <img src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/locations/ginter.jpg" alt="">
+
+    <?php
+    // check if the repeater field has rows of data
+    if( have_rows('branches') ):
+     	// loop through the rows of data
+        while ( have_rows('branches') ) : the_row(); ?>
+
+        <?php
+          //get the branch index from LibCal
+          for($i = 0; $i < count($body_string['locations']); ++$i){
+            if ($body_string['locations'][$i]['name'] == get_sub_field('libcal_branch_name')){
+              $branch_index = $i;
+            }
+          }
+        ?>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="">
+            <img src="<?php the_sub_field('branch_image');?>" alt="">
+          </div>
+          <a href="#" class="location_card_overlay" style="display:flex; justify-content: center; align-content: center;">
+            <span class="location_tile_name" style="align-self: center;"><h4><?php echo the_sub_field('name');?></h4></span>
+            <div class="location_branch_hours" style="display: flex; justify-content: center;">
+              <div style="align-self: center; width: 70%;">
+                <h5 style="margin-bottom: 5px;"><?php echo the_sub_field('name');?> Hours</h5>
+                <span>Updated <?php echo date('F jS, Y ');?></span>
+                <hr style="padding:0; margin: 3px 0;">
+                <table style="margin-bottom: 0;">
+                  <?php
+                    for ($i = 0; $i < count($days); $i++){
+                      timerowsAPI($days[$i], $branch_index, $body_string);
+                    }
+                  ?>
+                </table>
+
+
+              </div>
+
+            </div>
+          </a>
         </div>
-        <a href="#" class="location_card_overlay" style="display:flex; justify-content: center;">
-          <span style="align-self: center;">Ginter Park</span>
-        </a>
-      </div>
+      <?php endwhile;
+        else :
+          // no rows found
+        endif;
+      ?>
+
   </div>
 
 </section>
