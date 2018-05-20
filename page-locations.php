@@ -2,6 +2,7 @@
 /*
 Template Name: Locations
  */
+
  $url = 'https://api3.libcal.com/api_hours_grid.php?iid=4083&format=json&weeks=1&systemTime=0';
  $days = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
  $dayofweek = date('w');
@@ -14,15 +15,6 @@ Template Name: Locations
  }
 
 
- function timerowsAPI($day, $branch_index, $body_string){
-     echo "<tr>";
-     echo "<td>$day</td>";
-     echo "<td>";
-     echo $body_string['locations'][$branch_index]['weeks'][0][$day]['rendered'];
-     echo "</td>";
-     echo "</tr>";
- }
-
 
  $description =     get_field('description');
  $holiday_hours =   get_field('holiday_hours_link');
@@ -33,10 +25,12 @@ Template Name: Locations
 
 <section class="container-fluid location-map-section">
   <div class="row">
-    <div class="col-sm-6 col-xs-12">
-        <div class="emphasis_section" style="display:flex; justify-content: center; align-content: center; flex-direction: column;">
-          <?php echo $description;?>
-          <a href="<?php echo $holiday_hours; ?>"><button class="btn btn-primary" style="width: 300px;">Sunday and Holiday Hours</button></a>
+    <div class="col-sm-6 col-xs-12 emphasis">
+        <div class="block_section">
+          <div class="block_section_child" style="align-self: center; ">
+            <?php echo $description;?>
+            <a href="<?php echo $holiday_hours; ?>"><button class="btn btn-primary" style="width: 300px;">Sunday and Holiday Hours</button></a>
+          </div>
         </div>
 
     </div>
@@ -68,7 +62,7 @@ Template Name: Locations
           <div class="">
             <img src="<?php the_sub_field('branch_image');?>" alt="">
           </div>
-          <a href="#" class="location_card_overlay" style="display:flex; justify-content: center; align-content: center;">
+          <a href="<?php the_sub_field('link');?>" class="location_card_overlay" style="display:flex; justify-content: center; align-content: center;">
             <span class="location_tile_name" style="align-self: center;"><h4><?php echo the_sub_field('name');?></h4></span>
             <div class="location_branch_hours" style="display: flex; justify-content: center;">
               <div style="align-self: center; width: 70%;">

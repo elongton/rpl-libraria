@@ -197,3 +197,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+
+
+function timerowsAPI($day, $branch_index, $body_string){
+    echo "<tr>";
+    echo "<td>$day</td>";
+    echo "<td>";
+    echo $body_string['locations'][$branch_index]['weeks'][0][$day]['rendered'];
+    echo "</td>";
+    echo "</tr>";
+}

@@ -1,6 +1,7 @@
+/* Locations Template */
 .emphasis_section{
   height: 500px;
-  padding: 9vw 9vw;
+  /* padding: 9vw 9vw; */
 }
 @media(max-width: 768px){
   .emphasis_section{
@@ -76,4 +77,22 @@
 .location_card_overlay:hover .location_branch_hours{
   opacity: 1;
   display: inline;
+}
+
+
+/* Location Template */
+.location_page_image{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top_location_row{
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.25);
+}
+
+#location_hours_table tr td:first-child{
+  width: 50%;
 }

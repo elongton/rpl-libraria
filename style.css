@@ -60,6 +60,67 @@ Version: 1.0.0
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+/*CUSTOM - global*/
+
+
+/*top block sections*/
+.block_section{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.block_section td p{margin-bottom: 0;}
+.block_section table{margin-bottom: 0;}
+.block_section hr{width: 100%;}
+.block_section table,
+.block_section p,
+.block_section table p{font-size: 18px;}
+.block_section hr{margin: 20px 0;}
+.block_section table td:first-child{width: 50px;}
+
+.block-static{
+  padding: 50px 0;
+}
+.block_section_child{
+  align-self:center;
+  width: 65%;
+}
+@media(max-width: 768px){
+  .block_section{
+    padding: 40px;
+  }
+  .block_section_child{
+    width: 100%;
+  }
+}
+@media(max-width: 992px){
+  .block_section table td:first-child{width: 35px;}
+  .block_section table,
+  .block_section p,
+  .block_section table p{font-size: 15px;}
+}
+
+/*content block sections*/
+
+.content_block_section{
+  display: flex;
+  justify-content: center;
+}
+.content_right_block_section{
+  padding-right: 9vw;  
+}
+
+
+
+
+
+
+
+
+
+
 
 /* START container sizing stuff */
 .container {
@@ -69,19 +130,16 @@ Version: 1.0.0
   padding-right: 15px;
 }
 
-
 @media (max-width: 500px) {
   .container {
     width: 95%;
   }
 }
-
 @media (min-width: 500px) {
   .container {
     width: 90%;
   }
 }
-
 /* @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -112,6 +170,10 @@ Version: 1.0.0
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  /* added by max*/
+  display:flex;
+  flex-wrap: wrap;
+  /* added by max */
 }
 
 /* END container sizing stuff */
