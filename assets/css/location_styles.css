@@ -81,10 +81,18 @@
 
 
 /* Location Template */
-.location_page_image{
+.location_page_image, .location_meeting_room_image{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 450px;
+}
+
+@media(max-width: 768px){
+  .location_page_image, .location_meeting_room_image{
+    max-height: 300px;
+    min-height: 200px;
+  }
 }
 
 .top_location_row{
@@ -96,3 +104,38 @@
 #location_hours_table tr td:first-child{
   width: 50%;
 }
+
+
+.location_view_more_events{
+  text-align: right;
+}
+@media(max-width: 768px){
+  .location_view_more_events{
+    text-align: left;
+  }
+}
+
+.location_event_card_container{
+  height: 400px;
+  padding: 0 10px;
+}
+
+@media(max-width: 768px){
+  .location_event_card_container{
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .location_event_card{
+    padding-bottom: 40px;
+  }
+}
+
+
+.location_event_card {
+  background-color: white;
+  height: 100%;
+}
+#location_event_title{font-size: 1.5vw;}
+@media(min-width: 1200px){#location_event_title{font-size: 20px;}}
+@media(max-width: 768px){#location_event_title{font-size: 3vw;}}
+@media(max-width: 500px){#location_event_title{  font-size: 15px;}}

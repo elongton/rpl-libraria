@@ -209,3 +209,17 @@ function timerowsAPI($day, $branch_index, $body_string){
     echo "</td>";
     echo "</tr>";
 }
+
+
+function custom_echo($x, $length)
+{
+  if(strlen($x)<=$length)
+  {
+    echo $x;
+  }
+  else
+  {
+    $y=substr($x,0,$length) . '...';
+    echo $y;
+  }
+}
