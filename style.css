@@ -13721,7 +13721,7 @@ a:focus {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 300px;
   position: relative;
   text-align: center;
 }
@@ -13771,10 +13771,21 @@ a:focus {
   vertical-align: middle;
   position: relative;
   z-index: 10;
+  color: white;
 }
+
+.featured-banner{
+  z-index: 10;
+  color: white;
+  position: relative;
+}
+
 @media (max-width: 767px) {
   .page-banner .banner-header {
     padding-top: 90px;
+  }
+  .featured-banner{
+    padding: 40px 0;
   }
 }
 .lead-text {

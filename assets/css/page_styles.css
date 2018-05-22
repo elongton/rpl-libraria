@@ -8,6 +8,13 @@ header.page-entry-header{
   color: white;
   padding: 20px 0;
 }
+header.featured-entry-header{
+  background-color: #003652;
+  color: white;
+  padding: 10px 0;
+}
+
+
 
 #page-entry-header-container{
   display: flex;
