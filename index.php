@@ -13,13 +13,13 @@
  */
 
  get_header();
- get_template_part( 'template-parts/blog/content', 'blogindexheader' );
+ get_template_part( 'template-parts/blog/list/content', 'blogindexheader' );
 ?>
 
 
 <?php
 if ( have_posts() ) :
-  get_template_part( 'template-parts/blog/content', 'post_tiles' );
+  get_template_part( 'template-parts/blog/list/content', 'post_tiles' );
 else:?>
 <div class="no_posts" style="display: flex; justify-content: center; height: 300px; background-color: #003652; border-bottom: 5px dashed black; border-top: 5px dashed black;">
     <h2 style="align-self: center;">No posts yet...</h2>

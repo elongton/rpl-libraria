@@ -7,7 +7,8 @@
  * @package RPL_Libraria
  */
 
-get_header();
+ get_header();
+ get_template_part( 'template-parts/blog/detail/content', 'blogdetailheader' );
 ?>
 
 	<div id="primary" class="content-area">
@@ -16,11 +17,8 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-
 			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
+			//the_post_navigation();
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
@@ -32,6 +30,6 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+
+</article><!-- #post-<?php the_ID(); ?> -->
+<?php get_footer(); ?>

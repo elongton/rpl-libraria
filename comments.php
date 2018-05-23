@@ -121,7 +121,7 @@ if ( post_password_required() ) {
 		<h4 class="comment-reply-title" id="reply-title">Write your comment:</h4>
 		<span class="underline left"></span>
 		<form class="comment-form" id="commentform" method="post" action="blog-detail.html">
-				<div class="row">
+				<div class="row" style="display: inline;">
 						<p class="comment-form-author input-required">
 								<label>
 										<span class="first-letter">Name</span>
