@@ -202,7 +202,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
-
+//Max's custom functions
 
 function timerowsAPI($day, $branch_index, $body_string){
     echo "<tr>";
@@ -214,15 +214,10 @@ function timerowsAPI($day, $branch_index, $body_string){
 }
 
 
-function custom_echo($x, $length)
-{
-  if(strlen($x)<=$length)
-  {
+function custom_echo($x, $length){
+  if(strlen($x)<=$length){
     echo $x;
-  }
-  else
-  {
+  }else{
     $y=substr($x,0,$length) . '...';
     echo $y;
-  }
-}
+}}

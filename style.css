@@ -13760,7 +13760,9 @@ a:focus {
   background-image: url(assets/images/page-banners/1920x400.jpg);
 }
 .page-banner.services-banner {
-  background-image: url(assets/images/page-banners/1920x400.jpg);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .page-banner.signin-banner {
   background-image: url(assets/images/page-banners/1920x400.jpg);
@@ -17535,13 +17537,19 @@ a:focus {
   transform: translate3d(0px, 100%, 0px);
   transition: transform 0.35s ease 0s;
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 20px;
+
+  justify-content: flex-start;
 }
 @media (max-width: 1024px) {
   .blog-page .post-share {
     transform: translate3d(0px, 1px, 0px);
   }
 }
-.blog-page .post-share a {
+/* .blog-page .post-share a {
   border-right: 1px solid #eeeeee;
   color: #707070;
   display: inline-block;
@@ -17549,15 +17557,35 @@ a:focus {
   font-size: 12px;
   line-height: 12px;
   padding: 18px 20px;
+} */
+.blog-page .post-share div:first-child,
+.blog-page .post-share div.post-share-div{
+  /* border-right: 1px solid #eeeeee; */
+  color: #707070;
+  font-size: 12px;
+  line-height: 12px;
+  flex-shrink: 1;
 }
+
+.blog-page .post-share div.post-share-border{
+  height: 100%;
+  border-right: 1px solid #eeeeee;
+  margin: 0 20px;
+}
+.blog-page .post-share div a.blog-meta-link{padding: 0; color: #707070;}
+
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .blog-page .post-share a {
-    padding: 18px 16px;
+    /* padding: 18px 16px; */
   }
 }
 @media (max-width: 767px) {
   .blog-page .post-share a {
-    padding: 18px 17px;
+    /* padding: 18px 17px; */
+  }
+  .blog-page .post-share div.post-share-border{
+    margin: 0 10px;
   }
 }
 .blog-page .post-share a i {
@@ -17566,7 +17594,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .blog-page .post-share a i {
-    font-size: 10px;
+    /* font-size: 10px; */
   }
 }
 .blog-page .post-share a:last-child {
@@ -17633,12 +17661,12 @@ a:focus {
   color: #fff;
   font-weight: bold;
 }
-.blog-page .post-date-box .date:hover {
+/* .blog-page .post-date-box .date:hover {
   background-color: #ff7236;
 }
 .blog-page .post-date-box .month:hover {
   color: #ff7236;
-}
+} */
 @media (max-width: 1024px) {
   .blog-page .post-date-box .date,
   .blog-page .post-date-box .month {
@@ -17676,11 +17704,11 @@ a:focus {
 .blog-page .entry-meta span a:hover {
   color: #ff7236;
 }
-.blog-page .entry-meta span:after {
+/* .blog-page .entry-meta span:after {
   content: "/";
   display: inline-block;
   padding: 0 12px;
-}
+} */
 .blog-page .post-detail {
   background-color: #f4f4f4;
   margin-bottom: 30px;
