@@ -86,7 +86,7 @@
                     <?php endif;?>
                       <h3 class="entry-title"><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h3>
                       <div class="entry-meta">
-                          <span><i class="fa fa-user"></i> <a href="<?php get_the_author_link();?>"><?php echo get_the_author_meta('first_name');?></a></span>&nbsp;
+                          <span><i class="fa fa-user"></i> <a href="<?php get_the_author_link();?>"><?php echo get_the_author_meta('display_name');?></a></span>&nbsp;
                           <span><i class="fa fa-comment"></i> <a href="#"><?php echo comments_number(); ?></a></span>&nbsp;
                           <?php if (!empty($categories_array) && $categories_array[0] != 'Uncategorized' ):?>
                             <span>

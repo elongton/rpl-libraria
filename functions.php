@@ -221,3 +221,119 @@ function custom_echo($x, $length){
     $y=substr($x,0,$length) . '...';
     echo $y;
 }}
+
+
+
+//walker class
+
+class comment_walker extends Walker_Comment {
+	var $tree_type = 'comment';
+	var $db_fields = array( 'parent' => 'comment_parent', 'id' => 'comment_ID' );
+
+	// constructor – wrapper for the comments list
+	function __construct() { ?>
+
+
+	<?php }
+
+	// start_lvl – wrapper for child comments list
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$GLOBALS['comment_depth'] = $depth + 2; ?>
+
+		<ol class="children">
+
+	<?php }
+	// end_lvl – closing wrapper for child comments list
+	function end_lvl( &$output, $depth = 0, $args = array() ) {
+		$GLOBALS['comment_depth'] = $depth + 2; ?>
+		</ol>
+	<?php }
+
+	// start_el – HTML for comment template
+	function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 ) {
+		$depth++;
+		$GLOBALS['comment_depth'] = $depth;
+		$GLOBALS['comment'] = $comment;
+		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' );
+
+		if ( 'article' == $args['style'] ) {
+			$tag = 'article';
+			$add_below = 'comment';
+		} else {
+			$tag = 'article';
+			$add_below = 'comment';
+		} ?>
+
+		<li <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
+			<!-- <figure class="gravatar"><?php //echo get_avatar( $comment, 65, '[default gravatar URL]', 'Author’s gravatar' ); ?></figure> -->
+			<div class="comment-body" itemprop="text">
+				<div class="comment-author vcard">
+						<img class="avatar avatar-32 photo avatar-default" src="<?php echo get_avatar_url($comment, get_comment_ID());?>" alt="Comment Author">
+						<b class="fn">
+								<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>
+						</b>
+				</div>
+				<footer class="comment-meta">
+						<div class="left-arrow"></div>
+						<div class="reply">
+								<a href="<?php echo get_comment_reply_link($comment, get_comment_ID()); ?>" class="comment-reply-link">
+										<i class="fa fa-reply"></i> Reply
+								</a>
+						</div>
+						<div class="comment-metadata">
+								<a href="#">
+										<time datetime="2016-01-17">
+												<b><?php comment_date('M j, Y') ?> / </b>  <?php echo esc_html( human_time_diff( get_comment_date('U'), current_time('U') ) ) . ' ago'; ?>
+										</time>
+								</a>
+						</div>
+						<div class="comment-content">
+								<p><?php comment_text() ?></p>
+						</div>
+				</footer>
+			</div>
+
+	<?php }
+
+	// end_el – closing HTML for comment template
+	function end_el(&$output, $comment, $depth = 0, $args = array() ) { ?>
+	</li>
+	<?php }
+
+	// destructor – closing wrapper for the comments list
+	function __destruct() { ?>
+
+
+	<?php }
+
+}
+
+
+
+
+
+
+//comments_open
+function rpl_comment_form_layout ($fields) {
+	$commenter = wp_get_current_commenter();
+	$req       = get_option('require_name_email');
+	$aria_req  = ($req ? " aria-required='true'" : '');
+	$html_req  = ($req ? " required='required'" : '');
+	$html5     = 'html5';
+
+	$fields = array(
+			'author' => '<p class="comment-form-author input-required">
+											<input name="author" id="author" type="text" placeholder="Name *">
+									</p>',
+
+
+
+
+			'email' => '<p class="comment-form-email input-required">
+														<input name="email" id="email" type="email" placeholder="Email *">
+												</p>',
+			// 'url' => '<p class="comment-form-url"><label for="url">' . __('Website', 'rpl') . '</label> ' . '<input id="url" name="url" ' . ($html5 ? 'type="url"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></p>'
+	);
+		 return $fields;
+}
+add_filter( 'comment_form_default_fields', 'rpl_comment_form_layout' );

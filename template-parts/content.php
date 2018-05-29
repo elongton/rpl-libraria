@@ -7,6 +7,9 @@
  * @package RPL_Libraria
  */
 
+$views	= pvc_get_post_views($post_id = get_the_ID());
+$views_plugin_path    = 'post-views-counter/post-views-counter.php'; //for checking if posts-views-counter plugin is installed and active
+
 ?>
 
 
@@ -22,14 +25,14 @@
 									<article>
 										<div class="blog-detail">
 												<header class="entry-header">
-														<div class="blog_meta_category">
-																<a href="#." rel="category tag">Design</a>,
-																<a href="#." rel="category tag">art</a>
-														</div>
-														<h2 class="entry-title">Curabitur leo elit, interdum nec pretium eu, convallis ut erat. Curabitur sagittis feugiat tortor eget
-																vehicula. Aenean ut semper neque. Nam rhoncus id odio vitae iaculis.</h2>
+													<?php if (get_the_tag_list()):?>
+		                      <div class="blog_meta_category">
+		                          <?php echo get_the_tag_list('',', ',''); ?>
+		                      </div>
+		                    <?php endif;?>
+														<h2 class="entry-title"><?php the_title();?></h2>
 														<div class="entry-meta">
-																<span><i class="fa fa-user"></i> <a href="#">Admin</a></span>
+																<span><i class="fa fa-user"></i>&nbsp;<a href="<?php get_the_author_link();?>"><?php echo get_the_author_meta('display_name');?></a></span>
 														</div>
 												</header>
 												<div class="post-thumbnail">
@@ -41,19 +44,64 @@
 																		<a class="month" href="#.">Mar</a>
 																</div>
 														</div>
-														<figure>
-																<img alt="blog" src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/blog/1170x500.jpg" />
+														<?php if ( has_post_thumbnail()) :?>
+														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
+														<?php else:?>
+														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?> /assets/images/blog/1170x500.jpg')">
+														<?php endif;?>
 														</figure>
 												</div>
 												<div class="post-detail">
-														<div class="post-detail-head">
+														<div class="post-detail-head" style="display: flex; justify-content: flex-start; padding-right: 20px;">
 																<div class="post-share">
-																		<a href="#."><i class="fa fa-comment"></i> 37 Comments</a>
-																		<a href="#."><i class="fa fa-thumbs-o-up"></i> 110 Likes</a>
-																		<a href="#."><i class="fa fa-eye"></i> 180 Viewed</a>
-																</div>
-																<div class="post-social-share">
-																		<ul>
+																		<div class="post-share-div" style="display: flex; justify-content: center; flex-direction: column;">
+																			<a class="blog-meta-link" href="#."><i class="fa fa-comment"></i>&nbsp;<?php echo get_comments_number(); ?></a>
+																		</div>
+
+																		<div class="post-share-border"></div>
+																		<!--start wp_ulike-->
+																		<?php if(function_exists('wp_ulike')){
+																			 wp_ulike('get');
+																		 }?>
+																		<!--end wp_ulike-->
+
+																		<!--start comment views plugin-->
+																		<?php if (is_plugin_active($views_plugin_path)):?>
+																			<div class="post-share-border"></div>
+																			<div class="post-share-div" style="display: flex; justify-content: center; flex-direction: column;">
+																				<a class="blog-meta-link" href="#."><i class="fa fa-eye"></i>&nbsp;<?php echo $views;?></a>
+																			</div>
+																		<?php endif;?>
+																		<!--end comment views-->
+																		<div class="post-share-border"></div>
+
+																</div><!--post-share-->
+																<span class="example-spacer" style="flex: 1 1 auto;"></span>
+																<div class="" style="align-self: center;">
+
+
+																	<!-- AddToAny BEGIN -->
+																	 <style>
+																		 div.a2a_kit span{display:none;}
+																		 div#a2apage_dropdown a{font-family: "Open Sans", Helvetica, Arial, sans-serif;}
+																	 </style>
+
+																	 <script type="text/javascript">
+																	 var a2a_config = a2a_config || {};
+																		 a2a_config.onclick = 2;
+																		 // a2a_config.delay = 1000;
+																		 a2a_config.linkname = 'Example Page';
+																		 a2a_config.linkurl = 'http://www.example.com/page.html';
+																	 </script>
+
+																	 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+																			 <a class="a2a_dd blog-meta-link" href=""><i class="fa fa-share-alt"></i> Share</a>
+																	 </div>
+
+																	 <script async src="https://static.addtoany.com/menu/page.js"></script>
+																	 <!-- AddToAny END -->
+
+																		<!-- <ul>
 																				<li>
 																						<a href="#.">
 																								<i class="fa fa-facebook"></i>
@@ -63,54 +111,30 @@
 																				<li><a href="#."><i class="fa fa-twitter"></i> <span>/ Twitter</span></a></li>
 																				<li><a href="#."><i class="fa fa-google-plus"></i> <span>/ Google+</span></a></li>
 																				<li><a href="#."><i class="fa fa-youtube-play"></i> <span>/ Youtube</span></a></li>
-																		</ul>
+																		</ul> -->
 																</div>
 																<div class="clearfix"></div>
 														</div>
 														<div class="entry-content">
-																<p>Proin tincidunt molestie urna, non fringilla est pretium et. Proin dignissim porttitor quam, eget gravida ante accumsan et. Cras quis commodo massa. Nullam id mauris vel arcu ultricies hendrerit. Praesent hendrerit posuere risus, quis iaculis erat auctor non. Fusce bibendum in lorem ac pharetra. Mauris bibendum placerat massa non pellentesque. Maecenas interdum, nisl quis molestie gravida, sapien dui dictum urna, at pretium odio massa ut nibh. Nam sit amet eros ultricies leo ultrices sodales nec vel dui. Mauris imperdiet turpis sit amet lobortis efficitur. Mauris commodo nunc non risus auctor finibus. Ut egestas urna quis elit egestas, ac bibendum orci maximus. Maecenas risus magna, mollis et purus sit amet, pellentesque tempor lacus. Quisque dictum tortor ac est auctor, ut dapibus risus rutrum. Quisque porttitor turpis in sagittis porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean egestas consequat porttitor.</p>
-																<p>Praesent lorem felis, fringilla in feugiat a, pretium in erat. Mauris ultricies rhoncus justo, quis sollicitudin risus rutrum sed. Cras sit amet odio eget felis dignissim elementum sit amet a justo. Suspendisse sodales sem et fermentum luctus. Phasellus quis sapien tellus. Aenean sit amet est purus. Vestibulum justo risus, pharetra in sem eu, bibendum iaculis nisl. Aliquam pulvinar tellus vel ornare ultrices. Nam cursus varius egestas. Cras sed varius nulla, non volutpat diam. Sed ultricies dolor purus, vitae consectetur dolor imperdiet non.</p>
-																<img src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/blog/134x134.jpg" class="align-left" alt="">
-																<blockquote>
-																		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-																		<em>~ Adrey Pachai ~</em>
-																</blockquote>
-																<p>Ut facilisis nulla aliquet condimentum faucibus. Aliquam dictum purus vel risus rutrum volutpat. Nam vestibulum libero ligula, eget vehicula felis lacinia nec. Aenean venenatis, felis a commodo imperdiet, odio dui pharetra risus, non sodales ante diam vel magna. Maecenas rhoncus metus vitae velit suscipit, in faucibus nibh iaculis. Etiam auctor leo id velit iaculis vestibulum. Morbi sed urna ac justo elementum suscipit. Curabitur efficitur ullamcorper enim, consectetur placerat nisl rhoncus a. Etiam posuere odio in lorem bibendum, eu accumsan ipsum posuere. In ante mi, viverra tempor rutrum id, condimentum non tortor. Mauris bibendum placerat massa non pellentesque.</p>
-																<p>Maecenas interdum, nisl quis molestie gravida, sapien dui dictum urna, at pretium odio massa ut nibh. Nam sit amet eros ultricies leo ultrices sodales nec vel dui. Mauris imperdiet turpis sit amet lobortis efficitur.</p>
+															<?php the_content();?>
 														</div>
+														<?php if (get_the_tag_list()):?>
 														<footer class="entry-footer">
 																<div class="col-xs-12 col-sm-12 entry-tags">
-																		<strong><i class="fa fa-tags" aria-hidden="true"></i> Tags:</strong> <span><a href="#">Beauty</a> , <a href="#">Life Style</a> , <a href="#">Travel</a> , <a href="#">Fashion</a> , <a href="#">Health</a> , <a href="#">Food</a>, <a href="#">Adventure</a></span>
+																		<strong><i class="fa fa-tags" aria-hidden="true"></i> Tags:</strong>
+																			<span>
+																				<?php echo get_the_tag_list('',', ',''); ?>
+																			</span>
 																</div>
 														</footer>
+														<?php endif;?>
 												</div>
 										</div>
 								</article>
-								<div class="about-author">
-										<img src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/blog/140x140.jpg" alt="" />
-										<div class="author-content">
-												<div class="author-head">
-														<h3>Tom Hanks</h3>
-														<span class="underline left"></span>
-												</div>
-												<div class="post-social-share">
-														<ul>
-																<li>
-																		<a href="#.">
-																				<i class="fa fa-facebook"></i>
-																				<span>/ Facebook</span>
-																		</a>
-																</li>
-																<li><a href="#."><i class="fa fa-twitter"></i> <span>/ Twitter</span></a></li>
-																<li><a href="#."><i class="fa fa-google-plus"></i> <span>/ Google+</span></a></li>
-																<li><a href="#."><i class="fa fa-youtube-play"></i> <span>/ Youtube</span></a></li>
-														</ul>
-												</div>
-												<div class="clearfix"></div>
-												<p>Morbi in erat laoreet, eleifend mi sit amet, eleifend mauris. Duis magna turpis, semper ac ligula id, elementum hendrerit augue. Aliquam euismod sem ut justo ultrices, in eleifend sapien hendrerit. Vestibulum sollicitudin dapibus aliquet. Suspendisse a commodo ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-										</div>
-										<div class="clearfix"></div>
-								</div>
+								<?php
+								if (get_the_author_meta('description')){
+									get_template_part( 'template-parts/blog/detail/content', 'aboutauthor' );
+								}?>
 							</div>
 						</div>
 					</div><!--row-->

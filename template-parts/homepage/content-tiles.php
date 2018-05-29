@@ -11,7 +11,7 @@ $tile6   =    get_field('tile6');
 
 
 <section class="features">
-    <div class="tiles">
+    <div class="tiles_home">
         <ul>
           <a href="<?php echo $tile1['link_url']; ?>">
             <li style="background-image: url('<?php echo $tile1['image']; ?>'); background-size: cover; background-repeat: no-repeat;">
