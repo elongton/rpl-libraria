@@ -53,6 +53,7 @@ Version: 1.0.0
 /*--------------------------------------------------------------
 1. Bootstrap
 --------------------------------------------------------------*/
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -62,7 +63,24 @@ Version: 1.0.0
 
 /*CUSTOM - global*/
 
+/*page */
 
+.vellum{
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/*comments*/
+.comment-reply-title{margin-bottom: 5px;}
+#cancel-comment-reply-link{
+  font-size: 12px;
+}
+
+small #cancel-comment-reply-link{
+  margin-top: -10px;
+}
 /*top block sections*/
 .block_section{
   display:flex;
@@ -119,9 +137,6 @@ Version: 1.0.0
     padding: 40px 40px 0px 40px;
   }
 }
-
-
-
 
 
 
@@ -18142,7 +18157,7 @@ a:focus {
   font-size: 25px;
 }
 .comments-area .underline {
-  margin-bottom: 27px;
+  margin-bottom: 10px;
 }
 .comments-area ol {
   list-style: none;
@@ -18318,14 +18333,14 @@ a:focus {
 .reply a:hover {
   background: #ff7236;
 }
-.comment-respond{margin-top: 30px; margin-bottom: 30px;}
+.comment-respond{margin-top: 0; margin-bottom: 30px;}
 .comment-respond .comment-form-author,
 .comment-respond .comment-form-email,
 .comment-respond .comment-form-subject {
   display: inline-block;
   float: left;
   padding: 0 15px;
-  width: 50%;
+  width: 33.3333%;
 }
 @media (max-width: 767px) {
   .comment-respond .comment-form-author,

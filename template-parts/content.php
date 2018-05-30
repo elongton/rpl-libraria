@@ -6,7 +6,6 @@
  *
  * @package RPL_Libraria
  */
-
 $views	= pvc_get_post_views($post_id = get_the_ID());
 $views_plugin_path    = 'post-views-counter/post-views-counter.php'; //for checking if posts-views-counter plugin is installed and active
 

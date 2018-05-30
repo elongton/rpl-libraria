@@ -133,6 +133,7 @@ function rpl_libraria_scripts() {
 	wp_enqueue_style( 'page-style', get_template_directory_uri() . '/assets/css/page_styles.css' );
 	wp_enqueue_style( 'faq-style', get_template_directory_uri() . '/assets/css/faq_styles.css' );
 	wp_enqueue_style( 'location-style', get_template_directory_uri() . '/assets/css/location_styles.css' );
+	wp_enqueue_style( 'archive-style', get_template_directory_uri() . '/assets/css/archive_styles.css' );
 
 
 
@@ -230,6 +231,9 @@ class comment_walker extends Walker_Comment {
 	var $tree_type = 'comment';
 	var $db_fields = array( 'parent' => 'comment_parent', 'id' => 'comment_ID' );
 
+
+
+
 	// constructor – wrapper for the comments list
 	function __construct() { ?>
 
@@ -276,10 +280,20 @@ class comment_walker extends Walker_Comment {
 				<footer class="comment-meta">
 						<div class="left-arrow"></div>
 						<div class="reply">
-								<a href="<?php echo get_comment_reply_link($comment, get_comment_ID()); ?>" class="comment-reply-link">
-										<i class="fa fa-reply"></i> Reply
-								</a>
+							<?php comment_reply_link(array(
+									    'add_below'  => 'comment',
+									    'respond_id' => 'respond',
+									    'reply_text' => __('<i class="fa fa-reply"></i> Reply'),
+									    'login_text' => __('Log in to Reply'),
+									    'depth'      => 1,
+									    'before'     => '',
+									    'after'      => '',
+									    'max_depth'  => 3
+						    ));?>
+
 						</div>
+
+
 						<div class="comment-metadata">
 								<a href="#">
 										<time datetime="2016-01-17">
@@ -332,8 +346,26 @@ function rpl_comment_form_layout ($fields) {
 			'email' => '<p class="comment-form-email input-required">
 														<input name="email" id="email" type="email" placeholder="Email *">
 												</p>',
-			// 'url' => '<p class="comment-form-url"><label for="url">' . __('Website', 'rpl') . '</label> ' . '<input id="url" name="url" ' . ($html5 ? 'type="url"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></p>'
+			'url' => '<p class="comment-form-subject input-required">
+														<input name="url" id="subject" type="text" placeholder="Website">
+												</p>',
 	);
 		 return $fields;
 }
 add_filter( 'comment_form_default_fields', 'rpl_comment_form_layout' );
+
+
+
+
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_author() ) {
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        }
+
+    return $title;
+
+});
