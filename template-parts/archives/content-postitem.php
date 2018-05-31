@@ -7,26 +7,49 @@
 
 <div class="archive_item_container">
   <div class="archive_meta_sidebar">
-    <i class="far fa-calendar-alt archive_meta_icon"></i>
-    <span class="archive_meta_text"><?php echo get_the_date('M d, Y');?></span>
-    <hr class="archive_meta_divider">
-    <i class="far fa-comments archive_meta_icon"></i>
-    <span class="archive_meta_text">Comments off</span>
-    <hr class="archive_meta_divider">
-    <i class="fas fa-tags archive_meta_icon"></i>
-    <?php if (get_the_tag_list()):?>
-      <?php echo get_the_tag_list('','',''); ?>
-    <?php else:?>
-      <span class="archive_meta_text">No tags</span>
-    <?php endif;?>
-    <hr class="archive_meta_divider">
-    <i class="fas fa-bookmark archive_meta_icon"></i>
-    <div class="archive_meta_categories">
-      <?php echo get_the_category_list('','',''); ?>
+    <div class="archive_meta_item">
+      <i class="far fa-calendar-alt archive_meta_icon"></i>
+      <span class="archive_meta_text"><?php echo get_the_date('M d, Y');?></span>
+    </div>
+
+    <!-- <hr class="archive_meta_divider"> -->
+    <div class="archive_meta_item">
+      <i class="far fa-comments archive_meta_icon"></i>
+      <span class="archive_meta_text">
+          <?php comments_number( 'No Comments', 'One Comment', '% Comments' ); ?>
+          <?php if (comments_open()){
+            echo '(open)';
+          }else{
+            echo '(closed)';
+          }?>
+
+      </span>
+    </div>
+
+    <!-- <hr class="archive_meta_divider"> -->
+    <div class="archive_meta_item">
+      <i class="fas fa-tags archive_meta_icon"></i>
+      <div class="" style="word-wrap: break-word;">
+        <?php if (get_the_tag_list()):?>
+          <?php echo get_the_tag_list('',', ',''); ?>
+        <?php else:?>
+          <span class="archive_meta_text">No tags</span>
+        <?php endif;?>
+      </div>
     </div>
 
 
-  </div>
+    <!-- <hr class="archive_meta_divider"> -->
+    <div class="archive_meta_item">
+      <i class="fas fa-bookmark archive_meta_icon"></i>
+      <div class="archive_meta_categories">
+        <?php echo get_the_category_list('','&nbsp;',''); ?>
+      </div>
+    </div>
+
+
+
+  </div><!--archive_meta_sidebar-->
   <div class="archive_item_content">
     <a href="<?php echo get_permalink();?>">
       <?php if ( has_post_thumbnail()) :?>
@@ -40,24 +63,24 @@
     <div class="archive_content_text" style="display: flex; flex-direction: column;">
 
       <a href="<?php echo get_permalink();?>"><?php the_title( '<h2 class="entry-title" style="color: #282828;">', '</h2>' ); ?></a>
-      <div class="archive_title_meta" style="display: flex; flex-direction: row; align-items: center; margin: 5px 0;">
+      <div class="archive_title_meta">
 
           <i class="fa fa-user"></i>
           &nbsp;
           <a href="<?php get_the_author_link();?>"><?php echo get_the_author_meta('display_name');?></a>
           &nbsp;&nbsp;&nbsp;
-          <!--start wp_ulike-->
-          <?php if(function_exists('wp_ulike')){
-            wp_ulike('get');
-          }?>
-          &nbsp;&nbsp;&nbsp;
-          <!--end wp_ulike-->
           <?php if (is_plugin_active($views_plugin_path)):?>
             <div class="" style="display: flex; align-items: center;">
               <i class="fa fa-eye" style="font-size: 15px;"></i>&nbsp;<?php echo $views;?>
             </div>
           <?php endif;?>
-
+          &nbsp;&nbsp;&nbsp;
+          <!--start wp_ulike-->
+          <?php if (function_exists('wp_ulike_get_post_likes')):
+            echo '<i class="far fa-thumbs-up"></i>&nbsp;';
+          	echo wp_ulike_get_post_likes(get_the_ID());
+          endif;?>
+          <!--end wp_ulike-->
           <span class="spacer"></span>
           <!-- AddToAny BEGIN -->
            <style>
@@ -81,7 +104,7 @@
 
 
       </div><!-- archive title meta -->
-      <div>
+      <div style="padding-bottom: 15px;">
         <?php the_excerpt();?>
       </div>
       <div class="" style="flex-grow: 1; display: flex; align-items: center;">

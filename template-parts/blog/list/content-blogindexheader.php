@@ -17,38 +17,25 @@ $blog_image						=		get_field('header_image', get_option('page_for_posts'));
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="featured-entry-header">
-		<div class="container" id="page-entry-header-container">
-			<div>
+	<header class="featured-entry-header" style="padding: 20px 0;">
+		<div class="container" id="page-entry-header-container" style="display: flex; justify-content: center;">
+	          <div class="featured-banner" style="">
+	              <h1 class="text-center"><?php echo $blog_title;?></h1>
+	              <span class="underline center"></span>
+	              <span class="lead text-center" style="color: white;">News, reviews, and ideas you can use from librarians and library staff at RPL</span>
 
-			</div>
-			<div class="spacer"></div>
-			<div id="breadcrumbs-container">
-        <?php
-            if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb('
-            <span id="breadcrumbs">','</span>
-            ');}
-          ?>
-			</div>
+								<div id="breadcrumbs-container" style="margin-top: 15px;">
+									<?php
+											if ( function_exists('yoast_breadcrumb') ) {
+											yoast_breadcrumb('
+											<span id="breadcrumbs">','</span>
+											');}
+										?>
+								</div>
+	          </div>
 
 		</div>
 	</header><!-- .entry-header -->
 
-  <!-- Start: Page Banner -->
-	<?php if ($blog_image):?>
-	  <section class="page-banner services-banner" style="background-image: url('<?php echo $blog_image;?>');">
-	<?php else:?>
-		<section class="page-banner services-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/customization/page/default_texture.jpg');">
-	<?php endif;?>
-	      <div class="container" style="align-self: center;">
-	          <div class="featured-banner" style="">
-	              <h1><?php echo $blog_title;?></h1>
-	              <span class="underline center"></span>
-	              <span class="lead">News, reviews, and ideas you can use from librarians and library staff at RPL</span>
-	          </div>
-	      </div><!--container-->
-	  </section>
-    <!-- End: Page Banner -->
 
 	<!-- MAKE SURE YOU CLOSE OFF THE ARTICLE TAG -->

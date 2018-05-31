@@ -11,7 +11,7 @@ get_header();
 get_template_part( 'template-parts/archives/content', 'archiveheader' );
 ?>
 
-<section class="container vellum" style="padding-top: 15px; padding-bottom: 15px;">
+<section class="container vellum archive_container" style="padding-top: 15px; padding-bottom: 15px;">
 
 
 	<?php
@@ -28,7 +28,9 @@ get_template_part( 'template-parts/archives/content', 'archiveheader' );
 			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 			 */
 			get_template_part( 'template-parts/archives/content', 'postitem');
-			echo '<hr style="background-color: transparent; width: 95%; border-bottom: 1px dashed #003652;">';
+			if (($wp_query->current_post +1) != ($wp_query->post_count)) {
+				echo '<hr style="background-color: transparent; width: 95%; border-bottom: 1px dashed #003652;">';
+			}
 
 		endwhile;
 

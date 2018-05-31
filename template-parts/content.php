@@ -46,7 +46,7 @@ $views_plugin_path    = 'post-views-counter/post-views-counter.php'; //for check
 														<?php if ( has_post_thumbnail()) :?>
 														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
 														<?php else:?>
-														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?> /assets/images/blog/1170x500.jpg')">
+														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/blog/1170x500.jpg')">
 														<?php endif;?>
 														</figure>
 												</div>

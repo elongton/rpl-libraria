@@ -32,7 +32,7 @@
                   <?php if ( has_post_thumbnail() ) :?>
                     <a href="<?php echo get_permalink();?>"><img alt="blog" src="<?php echo $featured_image_url;?>" /></a>
                   <?php else:?>
-                    <a href="<?php echo get_permalink();?>"><img alt="blog" src="<?php echo get_parent_theme_file_uri(); ?> /assets/images/blog/370x266.jpg" /></a>
+                    <a href="<?php echo get_permalink();?>"><img alt="blog" src="<?php echo get_parent_theme_file_uri(); ?>/assets/images/blog/370x266.jpg" /></a>
                   <?php endif;?>
                   <div class="post-share">
                       <div class="post-share-div" style="display: flex; justify-content: center; flex-direction: column;">
@@ -41,9 +41,10 @@
 
                       <div class="post-share-border"></div>
                       <!--start wp_ulike-->
-                      <?php if(function_exists('wp_ulike')){
-                         wp_ulike('get');
-                       }?>
+                      <?php if (function_exists('wp_ulike_get_post_likes')):
+                        echo '<i class="far fa-thumbs-up"></i>&nbsp;';
+                      	echo wp_ulike_get_post_likes(get_the_ID());
+                      endif;?>
                       <!--end wp_ulike-->
 
                       <!--start comment views plugin-->

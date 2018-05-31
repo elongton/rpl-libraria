@@ -356,7 +356,7 @@ add_filter( 'comment_form_default_fields', 'rpl_comment_form_layout' );
 
 
 
-
+//change output of getting an archive title to remove the tag, category, etc extra text
 add_filter( 'get_the_archive_title', function ($title) {
     if ( is_category() ) {
             $title = single_cat_title( '', false );
@@ -369,3 +369,11 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+
+
+//change excerpt length
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
