@@ -28,10 +28,10 @@
       echo (count($quote_array) == 0 ? $default_author : ($quote_array[$randomQuoteIndex][1] == '' ? 'Unknown' : $quote_array[$randomQuoteIndex][1])    );
     ?>
   </span>
-  <form class="searchbar_form">
+  <form class="searchbar_form" action="/dev" onsubmit="" target="_self">
     <div class="form-group searchbar-wrapper" style="display: flex;">
       <!-- <label class="sr-only" for="keywords">Search</label> -->
-      <input class="" id="searchbar" placeholder="Search the Library" id="keywords" name="keywords" type="text">
+      <input class="" id="searchbar" placeholder="Search the Library" id="keywords" name="s" type="text">
       <!-- <input class="form-control" id="searchbutton" type="submit" value="Search"> -->
       <button id="searchbutton" type="submit" style="display:flex; justify-content: center;"><i style="align-self: center;" class="fa fa-search"></i></button>
     </div>
