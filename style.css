@@ -138,7 +138,10 @@ small #cancel-comment-reply-link{
   }
 }
 
-
+/*Miscellaneous*/
+.btn-edit-post-link{
+  margin-bottom: 20px!important;
+}
 
 /* START container sizing stuff */
 .container {

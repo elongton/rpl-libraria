@@ -134,6 +134,7 @@ function rpl_libraria_scripts() {
 	wp_enqueue_style( 'faq-style', get_template_directory_uri() . '/assets/css/faq_styles.css' );
 	wp_enqueue_style( 'location-style', get_template_directory_uri() . '/assets/css/location_styles.css' );
 	wp_enqueue_style( 'archive-style', get_template_directory_uri() . '/assets/css/archive_styles.css' );
+	wp_enqueue_style( 'forms-style', get_template_directory_uri() . '/assets/css/forms.css' );
 
 
 
