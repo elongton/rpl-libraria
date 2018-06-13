@@ -10,9 +10,7 @@
 get_header();
 get_template_part( 'template-parts/search/content', 'searchheader' );
 ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section class="container"  style="padding-top: 15px; padding-bottom: 15px;">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -47,9 +45,6 @@ get_template_part( 'template-parts/search/content', 'searchheader' );
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+</section>
 <?php
-get_sidebar();
 get_footer();

@@ -470,12 +470,22 @@ jQuery(document).ready(function( $ ) {
 });
 
 
-jQuery( window ).load(function() {
-    //Masonry
-    //--------------------------------------------------------
-    var girdFieldObj = jQuery('.grid');
-    girdFieldObj.masonry({
-        itemSelector: '.grid-item',
-        percentPosition: true
-    });
-});
+// jQuery( window ).load(function() {
+//     //Masonry
+//     //--------------------------------------------------------
+//     var girdFieldObj = jQuery('.grid');
+//     girdFieldObj.masonry({
+//         itemSelector: '.grid-item',
+//         percentPosition: true,
+//         // gutter: '.gutter-sizer'
+//     });
+// });
+//
+// //
+// var infiniteCount = 1;
+// jQuery( document.body ).on( 'post-load', function () {
+//     var elements = jQuery('.infinite-wrap.infinite-view-' + infiniteCount + ' article');
+//     // jQuery('#blog-page-grid').masonry( 'reload' );
+//     jQuery('#blog-page-grid').masonry( 'appended', elements );
+//     infiniteCount++;
+// });

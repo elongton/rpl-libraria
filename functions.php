@@ -378,3 +378,23 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 30;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+
+//add infinite scroll
+
+function infinite_scroll_render() {
+	get_template_part( 'template-parts/blog/list/content', 'loop' );
+}
+
+
+function rpl_libraria_infinite_scroll_init() {
+	add_theme_support( 'infinite-scroll', array(
+			'type' => 'scroll',
+	    'container' => 'blog-page-grid',
+			'render' => 'infinite_scroll_render',
+			'wrapper' => true,
+			'footer' => true,
+	) );
+}
+add_action( 'after_setup_theme', 'rpl_libraria_infinite_scroll_init' );

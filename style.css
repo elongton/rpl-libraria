@@ -18524,6 +18524,14 @@ a:focus {
     margin-bottom: 50px;
   }
 }
+
+.nav-links{
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align:center;
+  border-top: 2px solid #f4f4f4;;
+}
+
 .nav-links .page-numbers {
   border-color: #f4f4f4;
   border-width: 3px;
@@ -18537,7 +18545,7 @@ a:focus {
   line-height: 14px;
   margin: 0 5px;
   padding: 8px 0px;
-  text-align: center;
+  text-align: center!important;
   width: 36px;
 }
 @media (max-width: 767px) {
