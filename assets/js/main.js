@@ -470,16 +470,16 @@ jQuery(document).ready(function( $ ) {
 });
 
 
-// jQuery( window ).load(function() {
-//     //Masonry
-//     //--------------------------------------------------------
-//     var girdFieldObj = jQuery('.grid');
-//     girdFieldObj.masonry({
-//         itemSelector: '.grid-item',
-//         percentPosition: true,
-//         // gutter: '.gutter-sizer'
-//     });
-// });
+jQuery( window ).load(function() {
+    //Masonry
+    //--------------------------------------------------------
+    var girdFieldObj = jQuery('.grid');
+    girdFieldObj.masonry({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        // gutter: '.gutter-sizer'
+    });
+});
 //
 // //
 // var infiniteCount = 1;

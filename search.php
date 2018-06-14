@@ -10,20 +10,9 @@
 get_header();
 get_template_part( 'template-parts/search/content', 'searchheader' );
 ?>
-<section class="container"  style="padding-top: 15px; padding-bottom: 15px;">
+<section class="container archive_container"  style="padding-top: 15px; padding-bottom: 15px;">
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'rpl-libraria' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
+		<?php if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();

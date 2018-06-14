@@ -7,10 +7,13 @@
 	<header class="page-entry-header">
 		<div class="container" id="page-entry-header-container">
 			<div>
-        <?php
-        /* translators: %s: search query. */
-        printf( esc_html__( 'Search Results for: %s', 'rpl-libraria' ), '<span>' . get_search_query() . '</span>' );
-        ?>
+				<h1>
+					<?php
+					/* translators: %s: search query. */
+					printf( esc_html__( 'Search Results for: %s', 'rpl-libraria' ), '<span>' . get_search_query() . '</span>' );
+					?>
+				</h1>
+
 			</div>
 			<div class="spacer"></div>
 			<div id="breadcrumbs-container">

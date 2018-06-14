@@ -10,26 +10,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
 			<?php
-			rpl_libraria_posted_on();
-			rpl_libraria_posted_by();
+			get_template_part( 'template-parts/archives/content', 'postitem');
 			?>
-		</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php rpl_libraria_post_thumbnail(); ?>
+		<?php if ( 'page' === get_post_type() ) : ?>
+			<?php
+			get_template_part( 'template-parts/archives/content', 'pageitem');
+			?>
+		<?php endif; ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php rpl_libraria_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
+		<?php
+		if (($wp_query->current_post +1) != ($wp_query->post_count)) {
+			echo '<hr style="background-color: transparent; width: 95%; border-bottom: 1px dashed #003652;">';
+		}
+		?>
 </article><!-- #post-<?php the_ID(); ?> -->

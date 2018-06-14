@@ -27,5 +27,6 @@ else:?>
 <?php endif;?>
 
 
+
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php get_footer(); ?>
