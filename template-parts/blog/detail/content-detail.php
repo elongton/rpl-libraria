@@ -1,3 +1,9 @@
+<?php
+$day_of_month         = get_the_date('j');
+$month                = get_the_date('M');
+?>
+
+
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -21,13 +27,13 @@
 												</header>
 												<div class="post-thumbnail">
 														<div class="post-date-box">
-																<div class="post-date">
-																		<a class="date" href="#.">07</a>
-																</div>
-																<div class="post-date-month">
-																		<a class="month" href="#.">Mar</a>
-																</div>
-														</div>
+							                  <div class="post-date">
+							                      <a class="date" href="<?php echo get_permalink();?>"><?php echo $day_of_month;?></a>
+							                  </div>
+							                  <div class="post-date-month">
+							                      <a class="month" href="<?php echo get_permalink();?>"><?php echo $month;?></a>
+							                  </div>
+							              </div>
 														<?php if ( has_post_thumbnail()) :?>
 														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
 														<?php else:?>
