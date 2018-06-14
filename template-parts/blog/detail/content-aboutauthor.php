@@ -1,10 +1,12 @@
 <div class="about-author">
 
-  <img src="<?php echo get_avatar_url(get_the_author_meta('ID'), array('size' => '150'));?>" alt="">
+
+      <img src="<?php echo get_avatar_url(get_the_author_meta('ID'), array('size' => '150'));?>" alt="">
+
     <?php //echo get_avatar(get_the_author_meta('ID'), '150px');?>
     <div class="author-content">
         <div class="author-head">
-            <h3>About the Author</h3>
+            <a href="<?php echo get_author_posts_url( get_the_author_meta('ID')); ?>"><h3>About <?php echo get_the_author(); ?> </h3></a>
             <span class="underline left"></span>
         </div>
         <div class="post-social-share">
