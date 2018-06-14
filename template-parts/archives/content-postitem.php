@@ -70,7 +70,7 @@
 
           <i class="fa fa-user"></i>
           &nbsp;
-          <a href="<?php get_the_author_link();?>"><?php echo get_the_author_meta('display_name');?></a>
+          <a href="<?php echo get_author_posts_url( get_the_author_meta('ID')); ?>"><?php echo get_the_author(); ?></a>
           &nbsp;&nbsp;&nbsp;
           <?php if (is_plugin_active($views_plugin_path)):?>
             <div class="" style="display: flex; align-items: center;">

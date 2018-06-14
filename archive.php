@@ -13,12 +13,8 @@ get_template_part( 'template-parts/archives/content', 'archiveheader' );
 
 <section class="container vellum archive_container" style="padding-top: 15px; padding-bottom: 15px;">
 
-
 	<?php
-	if ( have_posts() ) :
-	?>
-		<?php
-
+		if ( have_posts() ) :
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();
