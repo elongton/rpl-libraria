@@ -22,7 +22,6 @@ get_template_part( 'template-parts/author/content', 'authorheader' );
     <?php echo get_the_author_meta('description');?>
   </p>
 
-  <?php the_author(); ?> has blogged <?php echo number_format_i18n( get_the_author_posts() ); ?>&nbsp;posts
 </div>
 
 <div class="container vellum" style="padding-top: 20px; padding-bottom: 20px;">
@@ -33,21 +32,20 @@ get_template_part( 'template-parts/author/content', 'authorheader' );
       ?>
       <h3><?php the_author(); ?>'s Posts</h3>
       <span class="underline left"></span>
+      <table>
       <?php
         /* Start the Loop */
-        while ( have_posts() ) :
-          the_post();
-        ?>
+          while ( have_posts() ) :
+            the_post();
+          ?>
+          <tr>
+            <td style="width: 130px;"><?php echo get_the_date('M j Y');?></td>
+            <td><a class="" href="<?php echo get_permalink();?>"><?php the_title();?></a></td>
 
-        <a  class="" href="<?php echo get_permalink();?>"><?php the_title();?></a><br>
-
-
-        <?php
-        endwhile;
-        else :
-          get_template_part( 'template-parts/post/content', 'none' );
-        endif;
-      ?>
+          </tr>
+          <?php endwhile; ?>
+        </table>
+        <?php endif;?>
     </div>
     <div class="col-sm-6 col-xs-12">
       <?php
