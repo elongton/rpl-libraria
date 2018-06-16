@@ -134,3 +134,11 @@
 }
 
 .archive_meta_categories ul{list-style: none; padding-left: 0; margin-bottom: 0;}
+
+
+
+/*blog index sidebar*/
+div.blog_index_container{
+  display: flex;
+  padding-right: 15px;
+}

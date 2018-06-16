@@ -1,22 +1,29 @@
 div.blog-sidebar{
   color: #003652;
-  width: 350px;
+  width: 300px;
   border:5px solid #003652;
   padding: 25px 25px;
   margin-top: 45px;
 }
 
+div.blog-sidebar a:hover,
+div.blog-sidebar a:focus,
+div.blog-sidebar a:visited,
+div.blog-sidebar a:active{
+  color: #ff7236;
+}
 div.blog-sidebar ul {
   list-style-type: none;
   margin-left: -38px;
 }
 
 div.blog-sidebar ul li::after {
-    
+
 }
 
 div.blog-sidebar h2{
   color: #003652;
+  font-size: 20px;
 }
 
 @media(max-width: 1200px){
@@ -36,5 +43,4 @@ div.blog-sidebar h2{
   div.blog-sidebar h2{
     font-size: 18px;
   }
-
 }

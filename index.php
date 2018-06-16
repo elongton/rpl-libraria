@@ -17,7 +17,7 @@
 ?>
 
 
-<div class="blog_index_container" style="display: flex; padding-right: 15px;">
+<div class="blog_index_container">
   <div class="" style="flex-grow: 1;">
     <?php
     if ( have_posts() ) :
