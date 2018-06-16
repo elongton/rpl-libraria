@@ -6,57 +6,43 @@
  *
  * @package RPL_Libraria
  */
- $comment_args = array(
- 	'user_id' => get_the_author_meta('ID'),
-  'status' => 'approve',
-);
-
-
 get_header();
 get_template_part( 'template-parts/author/content', 'authorheader' );
 ?>
 
 <div class="container vellum" style="padding-top: 20px; padding-bottom: 20px;">
-  <p>
-    <img style="float: left; margin-right: 10px; margin-bottom: 5px;" src="<?php echo get_avatar_url(get_the_author_meta('ID'), array('size' => '200'));?>" alt="">
-    <?php echo get_the_author_meta('description');?>
-  </p>
-
-</div>
-
-<div class="container vellum" style="padding-top: 20px; padding-bottom: 20px;">
   <div class="row">
-    <div class="col-sm-6 col-xs-12">
+    <div class="col-sm-10 col-xs-12">
       <?php
-        if ( have_posts() ) :
-      ?>
-      <h3><?php the_author(); ?>'s Posts</h3>
-      <span class="underline left"></span>
-      <table>
-      <?php
-        /* Start the Loop */
-          while ( have_posts() ) :
-            the_post();
-          ?>
-          <tr>
-            <td style="width: 130px;"><?php echo get_the_date('M j Y');?></td>
-            <td><a class="" href="<?php echo get_permalink();?>"><?php the_title();?></a></td>
+    		if ( have_posts() ) :
+    		/* Start the Loop */
+    		while ( have_posts() ) :
+    			the_post();
 
-          </tr>
-          <?php endwhile; ?>
-        </table>
-        <?php endif;?>
+    			/*
+    			 * Include the Post-Format-specific template for the content.
+    			 * If you want to override this in a child theme, then include a file
+    			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+    			 */
+    			get_template_part( 'template-parts/archives/content', 'postitem');
+    			if (($wp_query->current_post +1) != ($wp_query->post_count)) {
+    				echo '<hr style="background-color: transparent; width: 95%; border-bottom: 1px dashed #003652;">';
+    			}
+
+    		endwhile;
+
+    		the_posts_pagination();
+
+    	else :
+    		get_template_part( 'template-parts/post/content', 'none' );
+    	endif;
+    	?>
     </div>
-    <div class="col-sm-6 col-xs-12">
-      <?php
-        if ( get_comments($comment_args) ) :
-          $usercomments = get_comments($comment_args);
-        ?>
-          <h3><?php the_author(); ?>'s Comments</h3>
-          <span class="underline left"></span>
+    <div class="col-sm-2 col-xs-12">
+      <div class="author-sidebar">
+        <?php get_sidebar('author');   ?>
+      </div>
 
-          <?php wp_list_comments(array(), $usercomments)?>
-        <?php endif;?>
     </div>
   </div>
 

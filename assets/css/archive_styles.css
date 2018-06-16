@@ -140,5 +140,10 @@
 /*blog index sidebar*/
 div.blog_index_container{
   display: flex;
-  padding-right: 15px;
+}
+
+@media(max-width: 768px){
+  div.blog_index_container{
+    flex-direction: column;
+  }
 }

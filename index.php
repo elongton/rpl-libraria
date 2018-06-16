@@ -32,7 +32,10 @@
 
 
   <div class="blog-sidebar">
-    <?php get_sidebar('blog');   ?>
+    <div class="blog-sidebar-container">
+      <?php get_sidebar('blog');   ?>
+    </div>
+
   </div>
 </div>
 
