@@ -111,8 +111,17 @@ add_action( 'after_setup_theme', 'rpl_libraria_content_width', 0 );
  */
 function rpl_libraria_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'rpl-libraria' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Blog Sidebar', 'rpl-libraria' ),
+		'id'            => 'sidebar-blog',
+		'description'   => esc_html__( 'Add widgets here.', 'rpl-libraria' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Author Sidebar', 'rpl-libraria' ),
+		'id'            => 'sidebar-author',
 		'description'   => esc_html__( 'Add widgets here.', 'rpl-libraria' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -128,6 +137,7 @@ add_action( 'widgets_init', 'rpl_libraria_widgets_init' );
 function rpl_libraria_scripts() {
 	wp_enqueue_style( 'rpl-libraria-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'homepage-style', get_template_directory_uri() . '/assets/css/homepage_styles.css' );
+	wp_enqueue_style( 'sidebars-style', get_template_directory_uri() . '/assets/css/sidebar_styles.css' );
 	wp_enqueue_style( 'header-style', get_template_directory_uri() . '/assets/css/header_styles.css' );
 	wp_enqueue_style( 'footer-style', get_template_directory_uri() . '/assets/css/footer_styles.css' );
 	wp_enqueue_style( 'page-style', get_template_directory_uri() . '/assets/css/page_styles.css' );

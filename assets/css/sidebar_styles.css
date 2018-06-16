@@ -1,0 +1,40 @@
+div.blog-sidebar{
+  color: #003652;
+  width: 350px;
+  border:5px solid #003652;
+  padding: 25px 25px;
+  margin-top: 45px;
+}
+
+div.blog-sidebar ul {
+  list-style-type: none;
+  margin-left: -38px;
+}
+
+div.blog-sidebar ul li::after {
+    
+}
+
+div.blog-sidebar h2{
+  color: #003652;
+}
+
+@media(max-width: 1200px){
+  div.blog-sidebar{
+    width: 300px;
+  }
+  div.blog-sidebar h2{
+    font-size: 20px;
+  }
+}
+
+
+@media(max-width: 992px){
+  div.blog-sidebar{
+    width: 200px;
+  }
+  div.blog-sidebar h2{
+    font-size: 18px;
+  }
+
+}
