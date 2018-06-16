@@ -9,7 +9,7 @@
 			<div>
 
         <h1>
-          <?php echo get_the_author(); ?>
+          <?php echo get_the_author(); ?>'s Posts
         </h1>
         <h5>RPL Author</h5>
 

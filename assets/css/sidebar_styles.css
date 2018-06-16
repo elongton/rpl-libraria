@@ -76,3 +76,12 @@ div.author-sidebar ul {
 div.author-sidebar{
   text-align: justify;
 }
+
+div.author-sidebar h2{
+  color: #003652;
+  font-size: 20px;
+}
+
+div.author-sidebar section.widget{
+  margin-top: 15px;
+}
