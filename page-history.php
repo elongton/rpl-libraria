@@ -47,7 +47,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
         </div>
         <div class="col-sm-6 col-xs-12 history_right_div">
           <div class="history_description">
-            <?php echo $year_details?>
+            <?php echo $year_details;?>
           </div>
 
 
