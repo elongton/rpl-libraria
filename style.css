@@ -17656,7 +17656,7 @@ a:focus {
 }
 .blog-page .post-date-box {
   background: #fff;
-  left: 0;
+  right: 0;
   position: absolute;
   text-align: center;
   top: 0;
@@ -17670,9 +17670,9 @@ a:focus {
 .blog-page .post-date-box a {
   color: #282828;
   display: block;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 25px;
-  padding: 16px 0 17px;
+  padding: 15px 0 16px;
 }
 .blog-page .post-date-box .date {
   background-color: #282828;
@@ -17838,7 +17838,6 @@ a:focus {
 }
 
 .blog-detail figure.blog_detail_featured_image{
-  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17873,12 +17872,12 @@ a:focus {
     text-align: center;
   }
 }
-.blog-detail .post-date-box .date {
+/* .blog-detail .post-date-box .date {
   background-color: #ff7236;
-}
-.blog-detail .post-date-box .month {
+} */
+/* .blog-detail .post-date-box .month {
   color: #ff7236;
-}
+} */
 .blog-detail .post-detail {
   background-color: transparent;
   border: 10px solid #f3f2f2;

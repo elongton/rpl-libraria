@@ -35,9 +35,9 @@ $month                = get_the_date('M');
 							                  </div>
 							              </div>
 														<?php if ( has_post_thumbnail()) :?>
-														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
+														<figure class="blog_detail_featured_image" style="height: 400px; background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
 														<?php else:?>
-														<figure class="blog_detail_featured_image" style="background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/blog/1170x500.jpg')">
+														<figure class="blog_detail_featured_image" style="height: 250px; background-image: url('<?php echo get_parent_theme_file_uri(); ?>/assets/images/customization/blog/default_texture_blog.png')">
 														<?php endif;?>
 														</figure>
 												</div>

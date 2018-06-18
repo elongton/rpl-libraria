@@ -12,7 +12,7 @@ get_template_part( 'template-parts/author/content', 'authorheader' );
 
 <div class="container vellum" style="padding-top: 20px; padding-bottom: 20px;">
   <div class="row">
-    <div class="col-sm-10 col-xs-12">
+    <div class="col-md-10 col-sm-12">
       <?php
     		if ( have_posts() ) :
     		/* Start the Loop */
@@ -38,8 +38,8 @@ get_template_part( 'template-parts/author/content', 'authorheader' );
     	endif;
     	?>
     </div>
-    <div class="col-sm-2 col-xs-12">
-      <div class="author-sidebar">
+    <div class="col-md-2 col-sm-12">
+      <div class="author-sidebar rpl_sidebar">
         <?php get_sidebar('author');   ?>
       </div>
 
