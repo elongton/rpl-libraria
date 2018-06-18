@@ -18,43 +18,40 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
       $image              =   get_sub_field('image');
       $right_align        =   get_sub_field('right_align');
     ?>
-    <?php if ($right_align):?>
-      <div class="row history_reverse_row" style="margin-top: 3px;">
-        <div class="history_year" style=""><?php echo $year;?></div>
-        <div class="col-sm-6 history_left_div">
-          <div class="history_description pull-right">
-            <?php echo $year_details;?>
+      <?php if ($right_align):?>
+        <div class="row history_reverse_row" style="margin-top: 3px;">
+          <div class="history_year" style=""><?php echo $year;?></div>
+          <div class="col-sm-6 history_left_div">
+            <div class="history_description pull-right">
+              <?php echo $year_details;?>
+            </div>
+          </div>
+          <div class="col-sm-6 history_right_div">
+            <div class="history_title">
+              <h3 style="margin-bottom: 10px;"><?php echo $title;?></h3>
+              <img alt="history_image" class="history_image" src="<?php echo $image;?>" />
+            </div>
           </div>
         </div>
-        <div class="col-sm-6 history_right_div">
-          <div class="history_title">
+      <?php else:?>
+        <div class="row">
+          <div class="history_year" style=""><?php echo $year;?></div>
+          <div class="col-sm-6 col-xs-12 history_left_div">
+
             <h3 style="margin-bottom: 10px;"><?php echo $title;?></h3>
-            <img alt="history_image" class="history_image" src="<?php echo $image;?>" />
+            <?php if ($image):?>
+              <img alt="history_image" class="history_image" src="<?php echo $image;?>" />
+            <?php endif;?>
+          </div>
+          <div class="col-sm-6 col-xs-12 history_right_div">
+            <div class="history_description">
+              <?php echo $year_details;?>
+            </div>
+
+
           </div>
         </div>
-
-      </div>
-    <?php else:?>
-
-      <div class="row">
-        <div class="history_year" style=""><?php echo $year;?></div>
-        <div class="col-sm-6 col-xs-12 history_left_div">
-
-          <h3 style="margin-bottom: 10px;"><?php echo $title;?></h3>
-          <?php if ($image):?>
-            <img alt="history_image" class="history_image" src="<?php echo $image;?>" />
-          <?endif;?>
-        </div>
-        <div class="col-sm-6 col-xs-12 history_right_div">
-          <div class="history_description">
-            <?php echo $year_details;?>
-          </div>
-
-
-        </div>
-      </div>
-
-    <?php endif;?>
+      <?php endif;?>
     <?php endwhile;?>
   <?php endif;?>
 
