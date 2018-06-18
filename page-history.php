@@ -23,7 +23,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
         <div class="history_year" style=""><?php echo $year;?></div>
         <div class="col-sm-6 history_left_div">
           <div class="history_description pull-right">
-            <?php echo $year_details?>
+            <?php echo $year_details;?>
           </div>
         </div>
         <div class="col-sm-6 history_right_div">
