@@ -147,6 +147,7 @@ function rpl_libraria_scripts() {
 	wp_enqueue_style( 'sidebars-style', get_template_directory_uri() . '/assets/css/sidebar_styles.css' );
 	wp_enqueue_style( 'rpl-libraria-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'homepage-style', get_template_directory_uri() . '/assets/css/homepage_styles.css' );
+	wp_enqueue_style( 'history-style', get_template_directory_uri() . '/assets/css/history_styles.css' );
 	wp_enqueue_style( 'header-style', get_template_directory_uri() . '/assets/css/header_styles.css' );
 	wp_enqueue_style( 'footer-style', get_template_directory_uri() . '/assets/css/footer_styles.css' );
 	wp_enqueue_style( 'page-style', get_template_directory_uri() . '/assets/css/page_styles.css' );
