@@ -34,6 +34,8 @@
   padding: 10px;
 }
 
+.history_description p{margin-bottom: 0; padding-bottom: 0;}
+
 
 /*start flipped*/
 .history_left_div .history_description{
