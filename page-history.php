@@ -29,7 +29,9 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
           <div class="col-sm-6 history_right_div">
             <div class="history_title">
               <h3 style="margin-bottom: 10px;"><?php echo $title;?></h3>
-              <img alt="history_image" class="history_image" src="<?php echo $image;?>" />
+              <?php if ($image):?>
+                <img alt="history_image" class="history_image" src="<?php echo $image;?>" />
+              <?php endif;?>
             </div>
           </div>
         </div>

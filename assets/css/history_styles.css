@@ -15,7 +15,7 @@
 }
 
 
-.history_image{max-width: 100%;}
+.history_image{max-width: 100%; max-height: 50vh;}
 
 .history_left_div{
   border-right: 2px dashed rgba(0, 0, 0, .12);
@@ -53,6 +53,7 @@
 
   .history_image{
     width: 100%;
+    max-height: 100vh;
   }
 
   .history_title h3{
