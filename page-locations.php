@@ -26,7 +26,7 @@ Template Name: Locations
 <section class="container-fluid location-map-section">
   <div class="row">
     <div class="col-sm-6 col-xs-12 emphasis">
-        <div class="block_section">
+        <div class="special_block_section">
           <div class="block_section_child" style="align-self: center; ">
             <?php echo $description;?>
             <a href="<?php echo $holiday_hours; ?>"><button class="btn btn-primary" style="width: 300px;">Sunday and Holiday Hours</button></a>

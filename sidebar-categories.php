@@ -12,11 +12,14 @@
 
 
     }elseif (is_tag()){
-      echo "<h4 style='margin-bottom: 5px;'>About ";
-      echo the_archive_title();
-      echo "</h4>";
-      echo tag_description();
-    }else{}
+      if (tag_description()){
+        echo "<h4 style='margin-bottom: 5px;'>About ";
+        echo the_archive_title();
+        echo "</h4>";
+        echo tag_description();
+      }
+    }
+    else{}
   ?>
 </div>
 

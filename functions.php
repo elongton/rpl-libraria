@@ -129,7 +129,7 @@ function rpl_libraria_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Categories Sidebar', 'rpl-libraria' ),
+		'name'          => esc_html__( 'Category/Tag Archive Sidebar', 'rpl-libraria' ),
 		'id'            => 'sidebar-category',
 		'description'   => esc_html__( 'Add widgets here.', 'rpl-libraria' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -147,6 +147,7 @@ function rpl_libraria_scripts() {
 	wp_enqueue_style( 'sidebars-style', get_template_directory_uri() . '/assets/css/sidebar_styles.css' );
 	wp_enqueue_style( 'rpl-libraria-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'homepage-style', get_template_directory_uri() . '/assets/css/homepage_styles.css' );
+	wp_enqueue_style( 'tilepage-style', get_template_directory_uri() . '/assets/css/tilepage_styles.css' );
 	wp_enqueue_style( 'history-style', get_template_directory_uri() . '/assets/css/history_styles.css' );
 	wp_enqueue_style( 'header-style', get_template_directory_uri() . '/assets/css/header_styles.css' );
 	wp_enqueue_style( 'footer-style', get_template_directory_uri() . '/assets/css/footer_styles.css' );
