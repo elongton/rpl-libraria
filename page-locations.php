@@ -23,11 +23,11 @@ Template Name: Locations
  get_template_part( 'template-parts/page/content', 'pageheader' );
  ?>
 
-<section class="container-fluid location-map-section">
+<section class="container-fluid">
   <div class="row">
-    <div class="col-sm-6 col-xs-12 emphasis">
-        <div class="special_block_section">
-          <div class="block_section_child" style="align-self: center; ">
+    <div class="col-sm-6 col-xs-12 block_parent_left">
+        <div class="block_section block-padding">
+          <div class="block_section_child">
             <?php echo $description;?>
             <a href="<?php echo $holiday_hours; ?>"><button class="btn btn-primary" style="width: 300px;">Sunday and Holiday Hours</button></a>
           </div>

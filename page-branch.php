@@ -91,9 +91,9 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
 
 <div class="container-fluid">
   <div class="row top_location_row">
-    <div class="col-sm-6 col-xs-12">
-        <div class="block_section">
-          <div class="block_section_child">
+    <div class="col-sm-6 col-xs-12 block_parent_left">
+        <div class="block_section block-padding">
+          <div class="block_section_child special_block_section">
             <table>
               <tr>
                 <td><i class="fas fa-info"></i></td>
@@ -136,7 +136,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
     <!--Start Hours Section -->
     <div class="col-sm-6 col-xs-12" style="">
       <div class="content_block_section block-static">
-        <div class="block_section_child">
+        <div class="block_section_child block-padding">
           <h3 style="margin-bottom: 10px;">Hours</h3>
           <table class="table table-striped" id="location_hours_table">
             <?php
@@ -166,7 +166,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
 
     <!--Start Features Section -->
     <div class="col-sm-6 col-xs-12">
-      <div class="block-static content_right_block_section">
+      <div class="block-static content_right_block_section block-padding">
         <div class="">
 
           <h3 style="margin-bottom: 5px;">Features</h3>
@@ -194,7 +194,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
   <div class="row" id="meeting_rooms_section">
     <div class="col-sm-6 col-xs-12 location_meeting_room_image" style="background-image: url('<?php echo $meeting_room_image;?>')"></div>
     <div class="col-sm-6 col-xs-12" style="background-color: #ce232a;">
-      <div class="block-static content_right_block_section " style="display: flex; justify-content: center; flex-direction: column; height: 100%;">
+      <div class="block-static content_right_block_section block-padding" style="display: flex; justify-content: center; flex-direction: column; height: 100%;">
         <div class="" style="color: white;">
           <h3 style="margin-bottom: 5px;"><?php echo $meeting_room_title; ?></h3>
           <?php echo $meeting_room_content; ?>
@@ -217,8 +217,8 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
 <div style="background-color: #023651; padding: 30px 0;">
   <div class="container">
     <div class="row" style="margin-bottom: 10px;">
-      <div class="col-sm-6 col-xs-12" style="padding-left: 10px;"><h2>Upcoming Events at <?php echo $branch_name;?></h2></div>
-      <div class="col-sm-6 col-xs-12 location_view_more_events" style="padding-right: 10px; padding-left: 10px;"><a href="<?php echo $calendar_url;?>" target="_blank"><span>View More Events</span></a></div>
+      <div class="col-sm-6 col-xs-12" style="padding-left: 10px; display: flex; flex-direction: column; justify-content: flex-end;"><h2>Upcoming Events at <?php echo $branch_name;?></h2></div>
+      <div class="col-sm-6 col-xs-12 location_view_more_events" style="padding-right: 10px; padding-left: 10px;"><a href="<?php echo $calendar_url;?>" target="_blank"><button class="btn btn-primary">View More Events</button></a></div>
     </div>
 
 
@@ -232,7 +232,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
         <div class="location_event_card" style="position: relative;">
           <div class="location_event_header" style="display: flex; ">
             <!--start title -->
-            <div class="" style="height: 85.454px; background-color: #ff7236; color: white; padding: 10px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+            <div class="" style="height: 85.454px; background-color: #ff7236; color: white; padding: 10px; padding-left: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
               <h3 style="" id="location_event_title"><?php custom_echo($events_array[$i]['title'], 55)?></h3>
             </div>
             <!--end title -->
@@ -246,13 +246,19 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
             </div>
           </div>
 
-          <div class="" style="padding: 10px;">
+          <div class="" style="padding: 10px 20px;">
             <i class="fa fa-clock-o"></i>&nbsp;<?php echo date( $dateFormat_time, $event_time_start)?> - <?php echo date( $dateFormat_time, $event_time_end)?>
-            <p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<?php echo strip_tags($events_array[$i]['location']['name']);?></p>
+            <p>
+              <?php if ($events_array[$i]['location']['name']):?>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<?php echo strip_tags($events_array[$i]['location']['name']);?>
+              <?php else:?>
+              &nbsp;
+              <?php endif;?>
+            </p>
             <p><?php custom_echo(strip_tags($events_array[$i]['description']), 236);?></p>
           </div>
 
-          <a href="<?php echo $events_array[$i]['url']['public'];?>" target="_blank"><button class="btn btn-primary" style="position: absolute; bottom: 10px; left: 10px;">See Event</button></a>
+          <a href="<?php echo $events_array[$i]['url']['public'];?>" target="_blank"><button class="btn btn-primary" style="position: absolute; bottom: 10px; left: 20px;">See Event</button></a>
         </div>
       </div><!-- location_event_card_container-->
       <?php } ?>

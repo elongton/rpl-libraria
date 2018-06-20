@@ -49,49 +49,41 @@ get_header();
 					<section>
 						<div class="container-fluid">
 <?php
-						if($right_left_image == 'right_image'):
+						if($right_left_image == 'left_image'):
+							$left_tile_setup		=			get_sub_field('left_tile_setup');
+?>
+
+							<div class="row left_image_row">
+								<div class="col-sm-6 col-xs-12 tiles_left_image" style="background-size: cover; background-image: url('<?php echo $left_tile_setup['left_image'];?>')"></div>
+								<div class="col-sm-6 col-xs-12 block_colored tiles_left_text" style="background-color: <?php echo $background_color;?>;">
+									<div class="block-padding content_right_block_section">
+										<div>
+											<?php echo $left_tile_setup['left_text'];?>
+										</div>
+									</div><!-- block_section-->
+								</div>
+							</div><!--row-->
+
+
+
+<?php
+						elseif($right_left_image == 'right_image'):
 							$right_tile_setup		=			get_sub_field('right_tile_setup');
 ?>
 
 							<div class="row">
-								<div class="col-sm-6 col-xs-12" style="background-image: url('<?php echo $meeting_room_image;?>')"></div>
-								<div class="col-sm-6 col-xs-12 block_colored" style="background-color: red;">
-									<div class="block-padding content_right_block_section">
-										<div>
-											<h3 style="margin-bottom: 5px;">Features</h3>
-												<p>Irure non aliqua deserunt magna eiusmod et cillum velit eiusmod Lorem dolore laborum minim exercitation. Aliquip tempor adipisicing eiusmod Lorem dolor irure in pariatur ut ad minim. Nostrud ut pariatur ut non proident culpa quis elit laborum nisi in. Irure Lorem amet do mollit exercitation dolore cupidatat nostrud velit esse laboris irure deserunt sint laboris. Consequat laboris est nostrud ea commodo velit occaecat incididunt do. Et incididunt cillum Lorem est pariatur et labore. Quis nisi aliquip exercitation officia minim tempor eiusmod elit duis qui minim. Cillum dolore et sit dolor laboris ex commodo adipisicing velit exercitation minim incididunt sit.</p>
-										</div>
-									</div><!-- block_section-->
-								</div>
-							</div><!--row-->
-
-
-
-<?php
-						elseif($right_left_image == 'left_image'):
-							$left_tile_setup		=			get_sub_field('left_tile_setup');
-?>
-
-							<div class="row">
-								<div class="col-sm-6 col-xs-12 block_parent_left block_colored" style="background-color: #ce232a;">
+								<div class="col-sm-6 col-xs-12 block_parent_left block_colored" style="background-color: <?php echo $background_color;?>;">
 									<div class="block_section block-padding">
 										<div class="block_section_child">
-											<h3 style="margin-bottom: 10px;">Hours</h3>
-											<p>Irure non aliqua deserunt magna eiusmod et cillum velit eiusmod Lorem dolore laborum minim exercitation. Aliquip tempor adipisicing eiusmod Lorem dolor irure in pariatur ut ad minim. Nostrud ut pariatur ut non proident culpa quis elit laborum nisi in. Irure Lorem amet do mollit exercitation dolore cupidatat nostrud velit esse laboris irure deserunt sint laboris. Consequat laboris est nostrud ea commodo velit occaecat incididunt do. Et incididunt cillum Lorem est pariatur et labore. Quis nisi aliquip exercitation officia minim tempor eiusmod elit duis qui minim. Cillum dolore et sit dolor laboris ex commodo adipisicing velit exercitation minim incididunt sit.</p>
+											<?php echo $right_tile_setup['right_text'];?>
 										</div>
 									</div><!-- block_section-->
 								</div>
-								<div class="col-sm-6 col-xs-12" style="background-image: url('<?php echo $meeting_room_image;?>')"></div>
+								<div class="col-sm-6 col-xs-12 tiles_right_image" style="background-size: cover; background-image: url('<?php echo $right_tile_setup['right_image'];?>')"></div>
 							</div><!--row-->
-
-
-
 <?php
 						endif;//if($right_left_image )
 ?>
-
-
-
 						</div>
 					</section>
 <?php
@@ -99,66 +91,12 @@ get_header();
 				endif;//if(have_rows('tile_repeater')
 ?>
 
-
-
 <?php endif;//if($tile_text_select)?>
-
-
-
-
-
-
-
-
 <?php
 		endwhile;//have_rows('tiles_text_layout')
 	endif;//have_rows('tiles_text_layout')
 ?>
 <!--End Repeater Section --->
-
-
-<section>
-	<div class="container-fluid">
-		<div class="row">
-			<!--Start Hours Section -->
-			<div class="col-sm-6 col-xs-12" style="">
-				<div class="block_section block-padding">
-					<div class="block_section_child">
-						<h3 style="margin-bottom: 10px;">Hours</h3>
-						<p>Irure non aliqua deserunt magna eiusmod et cillum velit eiusmod Lorem dolore laborum minim exercitation. Aliquip tempor adipisicing eiusmod Lorem dolor irure in pariatur ut ad minim. Nostrud ut pariatur ut non proident culpa quis elit laborum nisi in. Irure Lorem amet do mollit exercitation dolore cupidatat nostrud velit esse laboris irure deserunt sint laboris. Consequat laboris est nostrud ea commodo velit occaecat incididunt do. Et incididunt cillum Lorem est pariatur et labore. Quis nisi aliquip exercitation officia minim tempor eiusmod elit duis qui minim. Cillum dolore et sit dolor laboris ex commodo adipisicing velit exercitation minim incididunt sit.</p>
-					</div>
-				</div><!-- block_section-->
-			</div>
-			<!--End Hours Section -->
-			<!--Start Features Section -->
-			<div class="col-sm-6 col-xs-12">
-				<div class="block-padding content_right_block_section">
-					<div>
-						<h3 style="margin-bottom: 5px;">Features</h3>
-							<p>Irure non aliqua deserunt magna eiusmod et cillum velit eiusmod Lorem dolore laborum minim exercitation. Aliquip tempor adipisicing eiusmod Lorem dolor irure in pariatur ut ad minim. Nostrud ut pariatur ut non proident culpa quis elit laborum nisi in. Irure Lorem amet do mollit exercitation dolore cupidatat nostrud velit esse laboris irure deserunt sint laboris. Consequat laboris est nostrud ea commodo velit occaecat incididunt do. Et incididunt cillum Lorem est pariatur et labore. Quis nisi aliquip exercitation officia minim tempor eiusmod elit duis qui minim. Cillum dolore et sit dolor laboris ex commodo adipisicing velit exercitation minim incididunt sit.</p>
-					</div>
-				</div><!-- block_section-->
-			</div>
-		<!--End Features Section -->
-		</div><!--row-->
-
-
-		<div class="row">
-			<div class="col-sm-6 col-xs-12 block_parent_left block_colored" style="background-color: #ce232a;">
-				<div class="block_section block-padding">
-					<div class="block_section_child">
-						<h3 style="margin-bottom: 10px;">Hours</h3>
-						<p>Irure non aliqua deserunt magna eiusmod et cillum velit eiusmod Lorem dolore laborum minim exercitation. Aliquip tempor adipisicing eiusmod Lorem dolor irure in pariatur ut ad minim. Nostrud ut pariatur ut non proident culpa quis elit laborum nisi in. Irure Lorem amet do mollit exercitation dolore cupidatat nostrud velit esse laboris irure deserunt sint laboris. Consequat laboris est nostrud ea commodo velit occaecat incididunt do. Et incididunt cillum Lorem est pariatur et labore. Quis nisi aliquip exercitation officia minim tempor eiusmod elit duis qui minim. Cillum dolore et sit dolor laboris ex commodo adipisicing velit exercitation minim incididunt sit.</p>
-					</div>
-				</div><!-- block_section-->
-			</div>
-	    <div class="col-sm-6 col-xs-12 location_meeting_room_image" style="background-image: url('<?php echo $meeting_room_image;?>')"></div>
-	  </div><!--row-->
-
-	</div><!--container-fluid-->
-</section>
-
-
 <section>
 
 	<?php
