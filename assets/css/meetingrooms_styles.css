@@ -1,0 +1,66 @@
+.mr_branch_button_row{
+  background-color: #003652;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 35px;
+}
+
+.mr_bb_col{padding: 0 5px 10px 5px;}
+
+.mr_branch_button{
+  text-align:center;
+  padding: 40px;
+  background-color: #ff7236;
+  transition: background-color .3s;
+  color: white;}
+.mr_branch_button:hover{background-color: #003652; cursor: pointer;}
+
+
+@media(max-width: 600px){
+  .mr_branch_button h3{font-size: 14px; white-space: nowrap;}
+}
+
+@media(max-width: 400px){
+  .mr_branch_button h3{font-size: 12px;}
+  .mr_branch_button{padding: 40px 15px;}
+}
+
+.mr_specs_table{
+  border: 1px solid white;
+  width: auto;
+  margin-top: 10px;
+}
+
+.mr_titlecell{
+  width: 120px;
+  border: 1px solid white;
+  padding: 5px;
+}
+.mr_datacell{
+  width: auto;
+  border: 1px solid white;
+  padding: 5px;
+  max-width: 250px;
+}
+.mr_description{
+  max-width: 370px;
+}
+
+/*background colors*/
+.mr_odd{
+  background-color: #ce232a;
+}
+.mr_even{
+  background-color: #022437;
+}
+
+
+/*sticky headers*/
+#event-spaces, #study-rooms{
+  z-index: 100000;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}

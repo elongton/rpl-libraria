@@ -34,7 +34,7 @@ Template Name: Locations
         </div>
 
     </div>
-    <div class="col-sm-6 col-xs-12" style="position: relative;">
+    <div class="col-sm-6 col-xs-12" style="position: relative; padding: 0px;">
       <?php get_template_part( 'template-parts/locations/content', 'map' );?>
     </div>
   </div>

@@ -8307,7 +8307,7 @@ a:focus {
   position: absolute;
   right: 0;
   /* top: 100px; */
-  z-index: 99;
+  z-index: 99999;
 }
 /* @media (max-width: 1499px) {
   .navbar-wrapper {

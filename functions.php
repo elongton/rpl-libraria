@@ -156,10 +156,12 @@ function rpl_libraria_scripts() {
 	wp_enqueue_style( 'location-style', get_template_directory_uri() . '/assets/css/location_styles.css' );
 	wp_enqueue_style( 'archive-style', get_template_directory_uri() . '/assets/css/archive_styles.css' );
 	wp_enqueue_style( 'forms-style', get_template_directory_uri() . '/assets/css/forms.css' );
+	wp_enqueue_style( 'meetingrooms-style', get_template_directory_uri() . '/assets/css/meetingrooms_styles.css' );
 
 
 
-	wp_enqueue_style( 's1', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
+	wp_enqueue_style( 's0', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
+	wp_enqueue_style( 's1', 'https://use.fontawesome.com/releases/v5.1.0/css/all.css');
 	wp_enqueue_style( 's2', get_template_directory_uri() . '/assets/css/animate.css' );
 	wp_enqueue_style( 's5', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i');
 

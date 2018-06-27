@@ -66,6 +66,30 @@ jQuery(document).ready(function( $ ) {
       });
     });
 
+
+
+  //Meeting Rooms sticky headers
+  var eventspacesoffset = $('#event-spaces').offset().top;
+  var studyroomsoffset = $('#study-rooms').offset().top;
+  var eventsticky = $('#event-spaces');
+  var studysticky = $('#study-rooms');
+
+  $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= eventspacesoffset && scroll < studyroomsoffset){
+        $('body').css('padding-top', eventsticky.height() + 'px');
+        eventsticky.addClass('fixed');
+        studysticky.removeClass('fixed');
+      }else if (scroll >= studyroomsoffset){
+        studysticky.addClass('fixed');
+        eventsticky.removeClass('fixed');
+      }else{
+        $('body').css('padding-top', '0px');
+        eventsticky.removeClass('fixed');
+        studysticky.removeClass('fixed');
+      }
+  });
 	//END CUSTOM STUFF
     //--------------------------------------------------------
 

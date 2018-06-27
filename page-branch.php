@@ -78,10 +78,13 @@ $randomFactoidIndex = rand(0,count($list_of_factoids)-1);
 
 $branch_image             =     get_field('image');
 $address                  =     get_field('address');
+$branch_manager           =     get_field('branch_manager');
 $phone                    =     get_field('phone_number');
 $meeting_room_title       =     get_field('meeting_room_title');
 $meeting_room_content     =     get_field('meeting_room_content');
 $meeting_room_image       =     get_field('meeting_room_image');
+$show_event_space_button  =     get_field('show_event_space_button');
+$show_study_room_button   =     get_field('show_study_room_button');
 
 
 get_header();
@@ -114,6 +117,15 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
                 <td class=""><?php echo $address;?></td>
               </tr>
             </table>
+            <?php if ($branch_manager):?>
+            <hr>
+            <table>
+              <tr>
+                <td class=""><i class="fas fa-user-tie"></i></td>
+                <td class=""><?php echo $branch_manager ;?></td>
+              </tr>
+            </table>
+            <?php endif;?>
             <a href="#hours_section"><button class="btn btn-primary" style="margin-top: 20px; width: 100%;">Hours</button></a>
             <a href="#meeting_rooms_section"><button class="btn btn-primary" style="margin-top: 20px; width: 100%;">Meeting Rooms</button></a>
           </div>
@@ -198,13 +210,29 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
         <div class="" style="color: white;">
           <h3 style="margin-bottom: 5px;"><?php echo $meeting_room_title; ?></h3>
           <?php echo $meeting_room_content; ?>
+          <?php if($show_event_space_button):
+            $event_space_button = get_field('event_space_button');
+          ?>
+            <a href="<?php echo $event_space_button['button_url'];?>"><button class="btn btn-primary" style="margin-top: 10px;"><?php echo $event_space_button['button_text'];?></button></a>
+          <?php endif;?>
+          <?php if($show_study_room_button && $show_event_space_button):?>
+            <span margin-left: 5px;>&nbsp;</span>
+          <?php endif;?>
+          <?php if($show_study_room_button):
+            $study_room_button = get_field('study_room_button');
+          ?>
+            <a href="<?php echo $study_room_button['button_url'];?>"><button class="btn btn-primary" style="margin-top: 10px;"><?php echo $study_room_button['button_text'];?></button></a>
+          <?php endif;?>
         </div>
       </div><!-- block_section-->
     </div>
   </div><!--row-->
-
-
 </div><!--container-fluid -->
+
+<!--Start Repeater Section --->
+<?php get_template_part( 'template-parts/tilepage/content', 'tilepage' );?>
+<!--End Repeater Section --->
+
 
 <!-- upcoming events section -->
 
