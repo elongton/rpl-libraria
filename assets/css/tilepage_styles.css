@@ -75,6 +75,10 @@
   }
 }
 
+.tiles_left_image,.tiles_right_image{
+background-size: cover;
+background-position: center;
+}
 /*Images*/
 @media(max-width: 768px){
   .tiles_left_image,.tiles_right_image{

@@ -35,7 +35,7 @@
 ?>
 
 							<div class="row left_image_row">
-								<div class="col-sm-6 col-xs-12 tiles_left_image" style="background-size: cover; background-image: url('<?php echo $left_tile_setup['left_image'];?>')"></div>
+								<div class="col-sm-6 col-xs-12 tiles_left_image" style="background-image: url('<?php echo $left_tile_setup['left_image'];?>')"></div>
 								<div class="col-sm-6 col-xs-12 block_colored tiles_left_text" style="background-color: <?php echo $background_color;?>;">
 									<div class="block-padding content_right_block_section">
 										<div>
@@ -60,7 +60,7 @@
 										</div>
 									</div><!-- block_section-->
 								</div>
-								<div class="col-sm-6 col-xs-12 tiles_right_image" style="background-size: cover; background-image: url('<?php echo $right_tile_setup['right_image'];?>')"></div>
+								<div class="col-sm-6 col-xs-12 tiles_right_image" style="background-image: url('<?php echo $right_tile_setup['right_image'];?>')"></div>
 							</div><!--row-->
 <?php
 						endif;//if($right_left_image )

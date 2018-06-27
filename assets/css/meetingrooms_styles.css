@@ -11,6 +11,11 @@
     padding: 40px 30px;
   }
 }
+@media(max-width: 500px){
+  .mr_intro_container{
+    padding: 40px 15px;
+  }
+}
 
 .mr_intro_image{
   height: 450px;
@@ -53,8 +58,9 @@
   .mr_branch_button h3{white-space: nowrap;}
 }
 
-@media(max-width: 400px){
-  .mr_branch_button h3{}
+@media(max-width: 500px){
+  .mr_branch_button{padding: 25px 15px;}
+  .mr_branch_button h3{font-size: 4vw;}
 }
 
 .mr_room_image_container{
