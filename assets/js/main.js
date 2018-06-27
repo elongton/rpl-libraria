@@ -74,6 +74,8 @@ jQuery(document).ready(function( $ ) {
   var eventsticky = $('#event-spaces');
   var studysticky = $('#study-rooms');
 
+
+
   $(window).scroll(function(){
       var scroll = $(window).scrollTop();
 
