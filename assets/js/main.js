@@ -69,10 +69,15 @@ jQuery(document).ready(function( $ ) {
 
 
   //Meeting Rooms sticky headers
-  var eventspacesoffset = $('#event-spaces').offset().top;
-  var studyroomsoffset = $('#study-rooms').offset().top;
-  var eventsticky = $('#event-spaces');
-  var studysticky = $('#study-rooms');
+  try {
+    var eventspacesoffset = $('#event-spaces').offset().top;
+    var studyroomsoffset = $('#study-rooms').offset().top;
+    var eventsticky = $('#event-spaces');
+    var studysticky = $('#study-rooms');
+  }
+  catch(error) {
+  }
+
 
 
 
@@ -84,6 +89,7 @@ jQuery(document).ready(function( $ ) {
         eventsticky.addClass('fixed');
         studysticky.removeClass('fixed');
       }else if (scroll >= studyroomsoffset){
+        $('body').css('padding-top', eventsticky.height() + 'px');
         studysticky.addClass('fixed');
         eventsticky.removeClass('fixed');
       }else{

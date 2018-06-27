@@ -158,7 +158,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
                   <div class="col-sm-6 col-xs-12 block_colored tiles_left_text" style="background-color: inherit;">
                     <div class="content_right_block_section mr_room_details">
                       <div class="">
-                        <h3><?php echo $list_of_branches[$i]['list_of_rooms'][$j]['room_name'];?></h3>
+                        <h3><?php echo $list_of_branches[$i]['list_of_rooms'][$j]['room_name'];?>&nbsp;(<?php echo $list_of_branches[$i]['branch_name'];?>)</h3>
                         <?php if ($list_of_branches[$i]['list_of_rooms'][$j]['room_details']):?>
                           <p class="mr_description"><?php echo $list_of_branches[$i]['list_of_rooms'][$j]['room_details'];?></p>
                         <?php endif;?>
@@ -169,7 +169,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
 
                           <?php for ($k = 0; $k < count($list_of_branches[$i]['list_of_rooms'][$j]['room_specifications']); $k++):?>
                               <tr>
-                                <td class="mr_titlecell"><?php echo $list_of_branches[$i]['list_of_rooms'][$j]['room_specifications'][$k]['spec_title']; ?></td>
+                                <td class="mr_titlecell"><?php echo $list_of_branches[$i]['list_of_rooms'][$j]['room_specifications'][$k]['spec_title']; ?>:</td>
                                 <td class="mr_datacell"><?php echo $list_of_branches[$i]['list_of_rooms'][$j]['room_specifications'][$k]['spec_description']; ?></td>
                               </tr>
                           <?php endfor;?>
@@ -229,7 +229,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
                     <div class="col-sm-6 col-xs-12 block_colored tiles_left_text" style="background-color: inherit;">
                       <div class="content_right_block_section mr_room_details">
                         <div class="">
-                          <h3><?php echo $list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['room_name'];?></h3>
+                          <h3><?php echo $list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['room_name'];?>&nbsp;(<?php echo $list_of_study_room_branches[$i]['branch_name'];?>)</h3>
                           <?php if ($list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['room_details']):?>
                             <p class="mr_description"><?php echo $list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['room_details'];?></p>
                           <?php endif;?>
@@ -240,7 +240,7 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
 
                             <?php for ($k = 0; $k < count($list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['study_room_specs']); $k++):?>
                                 <tr>
-                                  <td class="mr_titlecell"><?php echo $list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['study_room_specs'][$k]['spec_title']; ?></td>
+                                  <td class="mr_titlecell"><?php echo $list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['study_room_specs'][$k]['spec_title']; ?>:</td>
                                   <td class="mr_datacell"><?php echo $list_of_study_room_branches[$i]['list_of_study_rooms'][$j]['study_room_specs'][$k]['spec_description']; ?></td>
                                 </tr>
                             <?php endfor;?>
