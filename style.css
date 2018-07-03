@@ -143,6 +143,28 @@ small #cancel-comment-reply-link{
 
 /* END container sizing stuff */
 
+/*Random Stuff*/
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.small-btn{
+  background-color: #003652;
+  color: white;
+  width: auto;
+  display: inline-block;
+  padding: 3px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.small-btn:hover{
+  background-color: #ff7236;
+}
+
+
+/*end random stuff*/
 
 html {
   font-family: sans-serif;
