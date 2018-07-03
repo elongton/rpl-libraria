@@ -74,7 +74,7 @@ if( have_rows('sections') ):
 </div><!--container-fluid-->
 
 
-
+<?php get_template_part( 'template-parts/tilepage/content', 'tilepage' );?>
 
 
 

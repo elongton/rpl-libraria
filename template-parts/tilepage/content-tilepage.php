@@ -10,7 +10,7 @@
 					$font_color = 'white';
 				}
 ?>
-				<div class="tilepage_fullwidth_text_container"style="background-color: <?php echo $text['background_color'];?>;">
+				<div id = "<?php echo sanitize_title($text['sub-section_title']);?>" class="tilepage_fullwidth_text_container"style="background-color: <?php echo $text['background_color'];?>;">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 tilepage_fullwidth_text_col" style="color:<?php echo $font_color;?>;">
@@ -26,6 +26,7 @@
 					while(have_rows('tile_repeater')) : the_row();
 						$right_left_image			=			get_sub_field('right_left_image');
 						$background_color			=			get_sub_field('background_color');
+						$section_title				=			get_sub_field('sub-section_title');
 ?>
 					<section>
 						<div class="container-fluid">
@@ -34,7 +35,7 @@
 							$left_tile_setup		=			get_sub_field('left_tile_setup');
 ?>
 
-							<div class="row left_image_row">
+							<div id="<?php echo sanitize_title($section_title);?>" class="row left_image_row">
 								<div class="col-sm-6 col-xs-12 tiles_left_image" style="background-image: url('<?php echo $left_tile_setup['left_image'];?>')"></div>
 								<div class="col-sm-6 col-xs-12 block_colored tiles_left_text" style="background-color: <?php echo $background_color;?>;">
 									<div class="block-padding content_right_block_section">
@@ -52,7 +53,7 @@
 							$right_tile_setup		=			get_sub_field('right_tile_setup');
 ?>
 
-							<div class="row">
+							<div id="<?php echo sanitize_title($section_title);?>" class="row">
 								<div class="col-sm-6 col-xs-12 block_parent_left block_colored" style="background-color: <?php echo $background_color;?>;">
 									<div class="block_section block-padding">
 										<div class="block_section_child">
