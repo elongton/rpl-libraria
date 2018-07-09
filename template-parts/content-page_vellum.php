@@ -11,7 +11,7 @@
 
 ?>
 	<div class="entry-content">
-		<div class="container">
+		<div class="container vellum" style="padding-top: 25px; padding-bottom: 25px;">
 		<?php
 		the_content();
 
