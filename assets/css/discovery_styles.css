@@ -25,6 +25,16 @@
   }
 }
 
+/* .discovery_navigation{
+  margin-left: -10px;
+} */
+
+.discovery_bullet_icon{
+  margin-top: 6.5px;
+  margin-left: -8px;
+  color: #ff7236;
+}
+
 
 .discovery_section{margin-bottom: 50px;}
 .discovery_featured_div h4, .discovery_div h4{margin: 5px 0;}

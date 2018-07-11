@@ -47,7 +47,7 @@ endwhile;//group_repeater
 <div class="container">
 <?php for ($i = 0; $i < count($list_of_groups); $i++):?>
 <section class="discovery_section">
-  <div class="row" id="key-players">
+  <div class="row" id="<?php echo sanitize_title($list_of_groups[$i]['group_title']);?>">
     <div class="col-xs-12">
       <?php if($display_group_titles):?>
         <h3><?php echo $list_of_groups[$i]['group_title'];?></h3>
@@ -65,7 +65,7 @@ if($list_of_groups[$i]['featured_item']):
         <!-------------------->
         <div class="row">
             <!-- FEATURED IMAGE -->
-            <div class="col-sm-6 discovery_featured_div">
+            <div class="col-md-6 discovery_featured_div">
               <a href="<?php echo $list_of_groups[$i]['featured_item']['page'];?>">
                 <div style="background-image: url('<?php echo $list_of_groups[$i]['featured_item']['page_image'];?>')"></div>
                 <h4><?php echo $list_of_groups[$i]['featured_item']['title'];?></h4></a>
@@ -73,12 +73,12 @@ if($list_of_groups[$i]['featured_item']):
             </div>
 
             <!-- IMAGE QUAD -->
-            <div class="col-sm-6" style="padding: 0;">
+            <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
             <?php for ($j = 0; $j < 4; $j++): ?>
               <?php if($j % 2 == 0){
                 echo "<div class='row' style='margin: 0;'>";
               }?>
-              <div class="col-sm-6 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
+              <div class="col-sm-6 col-xs-12 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
                 <div style="background-image: url('<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page_image'];?>')"></div>
                 <h4><?php echo $list_of_groups[$i]['list_of_pages'][$j]['title'];?></h4></a></div>
               <?php if($j % 2 != 0){
@@ -93,7 +93,7 @@ if($list_of_groups[$i]['featured_item']):
             <?php if($j % 4 == 0){
               echo "<div class='row '>";
             }?>
-            <div class="col-sm-3 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
+            <div class="col-md-3 col-sm-6 col-xs-12 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
               <div style="background-image: url('<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page_image'];?>')"></div>
               <h4><?php echo $list_of_groups[$i]['list_of_pages'][$j]['title'];?></h4></a></div>
             <?php if($j % 4 == 3){
@@ -110,12 +110,12 @@ if($list_of_groups[$i]['featured_item']):
       <!-------------------->
       <div class="row">
         <!-- IMAGE QUAD -->
-        <div class="col-sm-6" style="padding: 0;">
+        <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
         <?php for ($j = 0; $j < 4; $j++): ?>
           <?php if($j % 2 == 0){
             echo "<div class='row' style='margin: 0;'>";
           }?>
-          <div class="col-sm-6 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
+          <div class="col-sm-6 col-xs-12 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
             <div style="background-image: url('<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page_image'];?>')"></div>
             <h4><?php echo $list_of_groups[$i]['list_of_pages'][$j]['title'];?></h4></a></div>
           <?php if($j % 2 != 0){
@@ -125,7 +125,7 @@ if($list_of_groups[$i]['featured_item']):
         </div><!--col-sm-6-->
 
         <!-- FEATURED IMAGE -->
-        <div class="col-sm-6 discovery_featured_div">
+        <div class="col-md-6 discovery_featured_div">
           <a href="<?php echo $list_of_groups[$i]['featured_item']['page'];?>">
             <div style="background-image: url('<?php echo $list_of_groups[$i]['featured_item']['page_image'];?>')"></div>
             <h4><?php echo $list_of_groups[$i]['featured_item']['title'];?></h4></a>
@@ -138,7 +138,7 @@ if($list_of_groups[$i]['featured_item']):
           <?php if($j % 4 == 0){
             echo "<div class='row'>";
           }?>
-          <div class="col-sm-3 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
+          <div class="col-md-3 col-sm-6 col-xs-12 discovery_div"><a href="<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page'];?>">
             <div style="background-image: url('<?php echo $list_of_groups[$i]['list_of_pages'][$j]['page_image'];?>')"></div>
             <h4><?php echo $list_of_groups[$i]['list_of_pages'][$j]['title'];?></h4></a></div>
           <?php if($j % 4 == 3){
