@@ -137,6 +137,15 @@ function rpl_libraria_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Section Sidebar', 'rpl-libraria' ),
+		'id'            => 'sidebar-section',
+		'description'   => esc_html__( 'Add widgets here.', 'rpl-libraria' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title" style="margin-top: 15px; margin-bottom: 5px;">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'rpl_libraria_widgets_init' );
 

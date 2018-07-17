@@ -1,4 +1,12 @@
 /* Header */
+
+.primary_menu{
+  justify-content: flex-end;
+  flex-grow: 2;
+  max-width: 1200px;
+}
+
+
 @media(max-width: 992px){
   .primary_menu{display:none;}
 }

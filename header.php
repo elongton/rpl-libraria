@@ -50,7 +50,7 @@
                     <nav class="navbar navbar-default">
 
 					<!-- ////////////////////////// START: DESKTOP NAV SECTION ////////////////////////////////////-->
-											<div class="" style="display: flex; align-items: center;">
+											<div class="" style="display: flex; align-items: center; justify-content: flex-end;">
 												<div class="rpl-brand"><!--had 'navbar-brand' class -->
 													<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 															<div class="svg_logo">
@@ -61,7 +61,8 @@
 															</div>
 													</a>
 												</div>
-												<div class="primary_menu" style="flex-grow: 1;">
+												<span style="flex-grow: 1;"></span>
+												<div class="primary_menu">
 													<?php wp_nav_menu( array( 'theme_location' => 'primary' ) );?>
 												</div>
 

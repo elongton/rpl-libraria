@@ -1,9 +1,10 @@
 <?php
 /*
 
-Template Name: Vellum
+Template Name: Section
 
  */
+
 
  get_header();
  get_template_part( 'template-parts/page/content', 'pageheader' );
@@ -14,7 +15,7 @@ Template Name: Vellum
    			while ( have_posts() ) :
    				the_post();
 
-   				get_template_part( 'template-parts/content', 'vellum' );
+   				get_template_part( 'template-parts/content', 'section' );
 
    				// If comments are open or we have at least one comment, load up the comment template.
    				if ( comments_open() || get_comments_number() ) :
