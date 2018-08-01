@@ -13,6 +13,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<meta name="_globalsign-domain-verification" content="SO_62AMnmrwTnHesBV6zkTax58HlFryotcqQgBEOpx" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -36,7 +37,7 @@
 							<div class="container" style="color: white;">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 									<div class="mobile_svg_logo">
-										<?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
+										<?php get_template_part('template-parts/header/content', 'svg_logo_updated'); ?>
 									</div>
 								</a>
 								<div class="spacer"></div>
@@ -54,7 +55,7 @@
 												<div class="rpl-brand"><!--had 'navbar-brand' class -->
 													<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 															<div class="svg_logo">
-																<?php get_template_part('template-parts/header/content', 'svg_logo'); ?>
+																<?php get_template_part('template-parts/header/content', 'svg_logo_updated'); ?>
 															</div>
 															<div class="logo_text">
 																Richmond <br>Public<br>Library

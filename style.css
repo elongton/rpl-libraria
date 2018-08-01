@@ -7381,9 +7381,9 @@ td,
 th {
   padding: 0;
 }
-.entry-content figure img {
+/* .entry-content figure img {
   padding: 10px 0;
-}
+} */
 .form-control {
   -webkit-appearance: none;
   -moz-appearance: none;

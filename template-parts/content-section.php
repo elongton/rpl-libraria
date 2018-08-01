@@ -37,7 +37,7 @@ if($is_parent){
         <?php if(count($mypages) > 0):?>
         <div class="col-md-3">
           <aside>
-            <h3>Browse <?php echo get_the_title($parent_id);?></h3>
+            <h3>Browse <?php  if($is_parent){echo get_the_title();}else{echo get_the_title($parent_id);}?></h3>
             <ul style="list-style: none; margin: 0; padding: 0;">
               <?php
                 $i = 0;
