@@ -33,6 +33,6 @@ get_header();
 </section>
 
 
-<?php
 
-get_footer();
+</article><!-- #post-<?php the_ID(); ?> -->
+<?php get_footer(); ?>

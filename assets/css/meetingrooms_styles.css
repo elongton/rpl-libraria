@@ -172,16 +172,13 @@
 
 /*background colors*/
 .study_room_color{
-  background-color: #ce232a;
+  background-color: #022437;
 }
-.study_room_color_faded{
+.study_room_color_faded, .event_space_color_faded{
   background-color: rgba(206, 35, 42, .7);
 }
 .event_space_color{
   background-color: #022437;
-}
-.event_space_color_faded{
-  background-color: rgba(2, 36, 55, .7);
 }
 
 

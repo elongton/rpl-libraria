@@ -1,0 +1,44 @@
+.kids_content_image{
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+@media(max-width: 1200px){
+  .kids_content_image{
+    width: 400px;
+    height: 240px;
+  }
+}
+
+@media(max-width: 992px){
+  .kids_content_image{
+    width: 350px;
+    height: 210px;
+  }
+}
+
+@media(max-width: 450px){
+  .kids_content_image{
+    width: 250px;
+    height: 150px;
+  }
+}
+
+
+.kids_discovery_link{
+  height: 200px;
+  /* border: 1px dashed black; */
+}
+
+.kids_discovery_link div{
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+  .kids_discovery_link div h3{color: white;}

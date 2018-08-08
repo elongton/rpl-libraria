@@ -50,23 +50,6 @@ jQuery(document).ready(function( $ ) {
       return false;
     });
 
-    //Owl Carousel
-    //--------------------------------------------------------
-    $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-        items:1,
-        animateOut: 'fadeIn',
-        animateIn: 'fadeOut',
-        loop: true,
-        dots: false,
-        nav: true,
-        pullDrag: false,
-        mouseDrag: false,
-        responsiveRefreshRate: 50,
-      });
-    });
-
-
 
   //Meeting Rooms sticky headers
   try {
@@ -90,12 +73,18 @@ jQuery(document).ready(function( $ ) {
         studysticky.removeClass('fixed');
       }else if (scroll >= studyroomsoffset){
         $('body').css('padding-top', eventsticky.height() + 'px');
-        studysticky.addClass('fixed');
-        eventsticky.removeClass('fixed');
+        try {
+          studysticky.addClass('fixed');
+          eventsticky.removeClass('fixed');
+        }
+        catch(error){}
       }else{
         $('body').css('padding-top', '0px');
-        eventsticky.removeClass('fixed');
-        studysticky.removeClass('fixed');
+        try {
+          eventsticky.removeClass('fixed');
+          studysticky.removeClass('fixed');
+        }
+        catch(error){}
       }
   });
 	//END CUSTOM STUFF
@@ -265,42 +254,18 @@ jQuery(document).ready(function( $ ) {
     //--------------------------------------------------------
     var owlObj = $('.owl-carousel');
     owlObj.owlCarousel({
-        loop: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 2
-            }
-        }
-    });
+      items : 1,
+      loop : true,
+      autoplay : true,
+      autoplayTimeout : 10000,
+      autoplaySpeed : 10000,
+      autoHeight : true,
+      slideTransition : 'linear',
+      animateIn : 'fadeIn',
+      mouseDrag : false,
+      dots : false,
+      responsiveRefreshRate : 50,
 
-    var owlEventObj = $('.owl-carousel-event');
-    owlEventObj.owlCarousel({
-        loop: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1200: {
-                items: 3
-            }
-        }
     });
 
     //Sidebar Accordion

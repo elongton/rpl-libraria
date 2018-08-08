@@ -82,6 +82,7 @@ if( have_rows('study_rooms_section')){
                                   'request_url'=>get_sub_field('request_url'),
                                   'study_room_specs'=>$list_of_study_room_specs,
                                   ];
+    $j++;
     endwhile;
     }else{
     }
@@ -191,13 +192,13 @@ get_template_part( 'template-parts/page/content', 'pageheader' );
 
 
   <div class="row">
-    <div id="study-rooms" class="col-xs-12" style="text-align: center; background-color: #a41c21; padding: 25px 0;">
+    <div id="study-rooms" class="col-xs-12" style="text-align: center; background-color: #003652; padding: 25px 0;">
       <h2>Study Rooms</h2>
     </div><!--col-xs-12-->
   </div><!--row-->
 
 
-  <div class="row mr_branch_button_row" style="background-color: #a41c21;">
+  <div class="row mr_branch_button_row" style="background-color: #003652;">
     <?php for ($i = 0; $i < count($list_of_study_room_branches); $i++):?>
       <div class="col-sm-6 col-xs-12 mr_bb_col"><a href="#<?php echo $list_of_study_room_branches[$i]['slug'];?>"><div class="mr_branch_button"><h3><?php echo $list_of_study_room_branches[$i]['branch_name'];?></h3></div></a></div>
     <?php endfor;?>
